@@ -93,7 +93,26 @@ li {
   height: 100px;
   line-height: 100px;
 }
-.beginner>.beginner_fast_pick{
-    width: 400px;
-    background: red;
+.beginner > .beginner_fast_pick {
+  width: 400px;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.beginner_fast_pick > .fast_pick_item {
+  width: 100px;
+  text-align: center;
+  position: relative;
+}
+.fast_pick_item > img {
+  border-radius: 50%;
+}
+.fast_pick_item > span {
+  position: absolute;
+  top: 70px;
+}
+
+.beginner > .sorts_district{
+    width: 900px;
 }
