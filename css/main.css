@@ -339,10 +339,10 @@ left:75%
   padding-left: 5px;
   vertical-align: top;
 }
-.board_introduction>.broad_text{
+.broad_text{
   width: 200px;
   height:60px;
-  position: absolute;
+display: inline-block;
   
 }
 .board_introduction>.board_channel{
