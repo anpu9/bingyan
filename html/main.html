@@ -4,124 +4,360 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Bilibili主页</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="../css/main.css"
-    />
-  </head>
-  <body>
-    <div class="app">
-      <div class="home">
-        <div class="header">
-          <div class="mini_header">
-            <div class="mini_header_content">
-              <div class="nav_link">
-                <ul class="nav_link_ul">
-                  <li class="nav_link_item">
-                    <a href="#">主站</a>
-                  </li>
-                  <li class="nav_link_item">
-                    <a href="#">番剧</a>
-                  </li>
-                  <li class="nav_link_item">
-                    <a href="#">游戏中心</a>
-                  </li>
-                  <li class="nav_link_item">
-                    <a href="#">直播</a>
-                  </li>
-                  <li class="nav_link_item">
-                    <a href="#">会员购</a>
-                  </li>
-                  <li class="nav_link_item">
-                    <a href="#">漫画</a>
-                  </li>
-                  <li class="nav_link_item">
-                    <a href="#">赛事</a>
-                  </li>
-                  <li class="nav_link_item">
-                    <a href="#">S10</a>
-                  </li>
-                  <li class="nav_link_item">
-                    <a href="#">下载APP</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="nav_search_box">
-                <div class="nav_search">
-                  <form>
-                    <input
-                      type="text"
-                      class="nav_search_keyword"
-                      placeholder="田宇阳复刻的B站"
-                    />
-                    <div class="nav_search_btn"></div>
-                  </form>
-                </div>
-              </div>
-              <div class="nav_user_center">
-                <div class="user_con search_icon">
-                  <div class="search_icon">
-                    <img
-                      class="search_icon_img"
-                      src="//i2.hdslb.com/bfs/face/6cbe6f10105e60e838e7e7db48dcc6ae5abd1517.jpg@87w_88h_1c_100q.webp"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="user_con signin">
-                  <ul class="signin">
-                    <li class="signin_item"><span>大会员</span></li>
-                    <li class="signin_item"><span>消息</span></li>
-                    <li class="signin_item"><span>动态</span></li>
-                    <li class="signin_item"><span>收藏</span></li>
-                    <li class="signin_item"><span>历史</span></li>
-                    <li class="signin_item"><span>创作中心</span></li>
-                  </ul>
-                </div>
-                <div class="contribute_btn">
-                  <span id="contribute_text">投稿</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="center_wrap">
-          <div class="beginner">
-            <div class="beginner_fast_pick">
-              <div class="fast_pick_item"><img src="//i0.hdslb.com/bfs/tag/4cdc6cb82344ae9d3f1e4e5443b37ba2423732f8.jpg@45w_45h_1c_100q.webp" /><span>首页</span></div>
-              <div class="fast_pick_item"><img src="//i0.hdslb.com/bfs/tag/4cdc6cb82344ae9d3f1e4e5443b37ba2423732f8.jpg@45w_45h_1c_100q.webp" /><span>首页</span></div>
-              <div class="fast_pick_item"><img src="//i0.hdslb.com/bfs/tag/4cdc6cb82344ae9d3f1e4e5443b37ba2423732f8.jpg@45w_45h_1c_100q.webp" /><span>首页</span></div>
-              <div class="fast_pick_item"><img src="//i0.hdslb.com/bfs/tag/4cdc6cb82344ae9d3f1e4e5443b37ba2423732f8.jpg@45w_45h_1c_100q.webp" /><span>首页</span></div>
 
-            </div>
-            <div class="sep"></div>
-            <div class="sorts_district"></div>
-            <div class="sorts_activities"></div>
-          </div>
-          <div class="begin_show">
-            <div class="broad">
-              <div class="broad_pictures"><img src="" /><span class="broad_text"></span></div>
-              <div class="broad_pictures"><img src="" /><span class="broad_text"></span></div>
-              <div class="broad_pictures"><img src="" /><span class="broad_text"></span></div>
-              <div class="broad_pictures"><img src="" /><span class="broad_text"></span></div>
-              <div class="eats_list">
-                  <div class="eats_item"></div>
-                  <div class="eats_item"></div>
-                  <div class="eats_item"></div>
-                  <div class="eats_item"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Bilibili主页</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
 
-              </div>
+<body>
+  <div class="app">
+    <header>
+      <div class="mini_header">
+        <div class="mini_header_content">
+          <ul class="nav_link_ul">
+            <li class="nav_link_item">
+              <a href="#">主站</a>
+            </li>
+            <li class="nav_link_item">
+              <a href="#">番剧</a>
+            </li>
+            <li class="nav_link_item">
+              <a href="#">游戏中心</a>
+            </li>
+            <li class="nav_link_item">
+              <a href="#">直播</a>
+            </li>
+            <li class="nav_link_item">
+              <a href="#">会员购</a>
+            </li>
+            <li class="nav_link_item">
+              <a href="#">漫画</a>
+            </li>
+            <li class="nav_link_item">
+              <a href="#">赛事</a>
+            </li>
+            <li class="nav_link_item">
+              <a href="#">S10</a>
+            </li>
+            <li class="nav_link_item">
+              <a href="#">下载APP</a>
+            </li>
+          </ul>
+
+          <div class="nav_search">
+            <input type="text" class="nav_search_keyword" placeholder="田宇阳复刻的B站" />
+            <div class="nav_search_btn"></div>
+          </div>
+
+          <div class="nav_user_center">
+            <div class="search_icon">
+              <img class="search_icon_img" src="../img/anpu.webp" alt="" />
+            </div>
+
+            <ul class="signin">
+              <li class="signin_item"><span>大会员</span></li>
+              <li class="signin_item"><span>消息</span></li>
+              <li class="signin_item"><span>动态</span></li>
+              <li class="signin_item"><span>收藏</span></li>
+              <li class="signin_item"><span>历史</span></li>
+              <li class="signin_item"><span>创作中心</span></li>
+            </ul>
+
+            <div class="contribute_btn">
+              <span id="contribute_text">投稿</span>
             </div>
           </div>
         </div>
       </div>
+    </header>
+    <div class="center_wrap">
+      <div class="beginner">
+        <div class="beginner_fast_pick">
+          <div class="fast_pick_item">
+            <img src="../img/凤凰.webp" alt="iu" /><span>首页</span>
+          </div>
+          <div class="fast_pick_item">
+            <img src="../img/凤凰.webp" alt="iu" /><span>首页</span>
+          </div>
+          <div class="fast_pick_item">
+            <img src="../img/凤凰.webp" alt="iu" /><span>首页</span>
+          </div>
+          <div class="fast_pick_item">
+            <img src="../img/凤凰.webp" alt="iu" /><span>首页</span>
+          </div>
+        </div>
+        <div class="sep"></div>
+        <div class="sorts_district">
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">动画</span><span class="distrcit_item_number">999+</span>
+          </div>
+          <div class="district_items">
+            <span class="distrcit_item_name">更多</span><span class="distrcit_item_more">∨</span>
+          </div>
+        </div>
+        <div class="sep"></div>
+        <div class="sorts_activities">
+          <div class="sorts_activity_item">
+            <img src="../img/icon.png" /><span>专栏</span>
+          </div>
+          <div class="sorts_activity_item">
+            <img src="../img/icon.png" /><span>专栏</span>
+          </div>
+          <div class="sorts_activity_item">
+            <img src="../img/icon.png" /><span>专栏</span>
+          </div>
+          <div class="sorts_activity_item">
+            <img src="../img/icon.png" /><span>专栏</span>
+          </div>
+          <div class="sorts_activity_item">
+            <img src="../img/icon.png" /><span>专栏</span>
+          </div>
+          <div class="sorts_activity_item">
+            <img src="../img/icon.png" /><span>专栏</span>
+          </div>
+        </div>
+      </div>
+      <div class="begin_show_container">
+        <div class="play_broad_container">
+          <ul id="broad_list">
+            <li class="broad_item">
+              <img src="../img/play1.png@880w_388h_1c_95q" alt="1" />
+              <p class="broad_text">words1</p>
+            </li>
+            <li class="broad_item">
+              <img src="../img/play2.jpg@880w_388h_1c_95q" alt="2" />
+              <p class="broad_text">words2</p>
+            </li>
+            <li class="broad_item">
+              <img src="../img/play3.jpg@880w_388h_1c_95q" alt="3" />
+              <p class="broad_text">words3</p>
+            </li>
+            <li class="broad_item">
+              <img src="../img/play3.jpg@880w_388h_1c_95q" alt="4" />
+              <p class="broad_text">words4</p>
+            </li>
+            <li class="broad_item">
+              <img src="../img/play5.png@880w_388h_1c_95q" alt="4" />
+              <p class="broad_text">words5</p>
+            </li>
+          </ul>
+          <div class="eats_buttoms">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a class="arrow" id="prev">更多 ></a>
+        </div>
+        <ul id="suggest_video_list">
+          <li class="suggest_video_item"><img src="../img/suggest_video_pic.jpg" alt="1">
+            <div class="suggeset_video_words">
+              <p class="suggest_video_title">标题1</p>
+              <p class="suggest_video_up">up主1</p>
+              <p class="suggest_video_playsum">播放量1</p>
+            </div>
+          </li>
+          <li class="suggest_video_item"><img src="../img/suggest_video_pic.jpg" alt="2">
+            <div class="suggeset_video_words">
+              <p class="suggest_video_title">标题1</p>
+              <p class="suggest_video_up">up主1</p>
+              <p class="suggest_video_playsum">播放量1</p>
+            </div>
+          </li>
+          <li class="suggest_video_item"><img src="../img/suggest_video_pic.jpg" alt="3">
+            <div class="suggeset_video_words">
+              <p class="suggest_video_title">标题1</p>
+              <p class="suggest_video_up">up主1</p>
+              <p class="suggest_video_playsum">播放量1</p>
+            </div>
+          </li>
+          <li class="suggest_video_item"><img src="../img/suggest_video_pic.jpg" alt="4">
+            <div class="suggeset_video_words">
+              <p class="suggest_video_title">标题1</p>
+              <p class="suggest_video_up">up主1</p>
+              <p class="suggest_video_playsum">播放量1</p>
+            </div>
+          </li>
+          <li class="suggest_video_item"><img src="../img/suggest_video_pic.jpg" alt="5">
+            <div class="suggeset_video_words">
+              <p class="suggest_video_title">标题1</p>
+              <p class="suggest_video_up">up主1</p>
+              <p class="suggest_video_playsum">播放量1</p>
+            </div>
+          </li>
+          <li class="suggest_video_item"><img src="../img/suggest_video_pic.jpg" alt="6">
+            <div class="suggeset_video_words">
+              <p class="suggest_video_title">标题1</p>
+              <p class="suggest_video_up">up主1</p>
+              <p class="suggest_video_playsum">播放量1</p>
+            </div>
+          </li>
+
+      </div>
+      <section class="center" id="section1">
+        <div class="section_content">
+          <div class="section_intro">
+            <img src="../img/section_icon.png" class="section_intro_icon"><span class="section_intro_title">推广</span>
+          </div>
+          <ul class="section_list">
+            <li class="section_item">
+              <img class="section_video" src="../img/section_pic.jpg@412w_232h_1c" alt="1">
+              <p class="section_words">introduction1</p>
+              <p class="section_up">up1</p>
+            </li>
+            <li class="section_item">
+              <img class="section_video" src="../img/section_pic.jpg@412w_232h_1c" alt="1">
+              <p class="section_words">introduction1</p>
+              <p class="section_up">up1</p>
+            </li>
+            <li class="section_item">
+              <img class="section_video" src="../img/section_pic.jpg@412w_232h_1c" alt="1">
+              <p class="section_words">introduction1</p>
+              <p class="section_up">up1</p>
+            </li>
+            <li class="section_item">
+              <img class="section_video" src="../img/section_pic.jpg@412w_232h_1c" alt="1">
+              <p class="section_words">introduction1</p>
+              <p class="section_up">up1</p>
+            </li>
+          </ul>
+
+        </div>
+        <div class="section_ad">
+
+          <p>在线列表</p>
+
+          <img src="../img/section_ad_pic.jpg">
+        </div>
+      </section>
+      <section class="center" id="section2">
+        <div class="section_content">
+          <div class="section_intro">
+            <img src="../img/section_icon.png" class="section_intro_icon"><span class="section_intro_title">推广</span>
+          </div>
+          <ul class="section_list">
+            <li class="section_item">
+              <img class="section_video" src="../img/section_pic.jpg@412w_232h_1c" alt="1">
+              <span class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span><span
+                class="section_video_time">2:26:45</span>
+              <p class="section_words" title="title1">introduction1</p>
+
+            </li>
+            <li class="section_item">
+              <img class="section_video" src="../img/section_pic.jpg@412w_232h_1c" alt="1">
+              <span class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span><span
+                class="section_video_time">2:26:45</span>
+              <p class="section_words" title="title1">introduction1</p>
+
+            </li>
+            <li class="section_item">
+              <img class="section_video" src="../img/section_pic.jpg@412w_232h_1c" alt="1">
+              <span class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span><span
+                class="section_video_time">2:26:45</span>
+              <p class="section_words" title="title1">introduction1</p>
+
+            </li>
+            <li class="section_item">
+              <img class="section_video" src="../img/section_pic.jpg@412w_232h_1c" alt="1">
+              <span class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span><span
+                class="section_video_time">2:26:45</span>
+              <p class="section_words" title="title1">introduction1</p>
+
+            </li>
+          </ul>
+
+        </div>
+        <div class="section_ad">
+
+          <p>在线列表</p>
+
+          <img src="../img/section_ad_pic.jpg">
+        </div>
+      </section>
+      <section class="center banner_ad">
+        <img src="../img/banner_ad1.jpg">
+      </section>
+      <section class="center ranking" id="section3">
+        <div class="section_twoline_content">
+          <div class="section_intro">
+            <img src="../img/section_icon.png" class="section_intro_icon"><span
+              class="section_intro_title">正在直播</span><span id="live_boardcast">当前正有<span
+                id="live_number">27139</span>个在线直播</span>
+          </div>
+          <ul id="section_host_list">
+            <li class="section_host_item">
+              <img src="../img/twoline_pic.webp" lass="section_video">
+              <p class="listener_number">9518</p>
+              <div class="board_introduction">
+                <img class="board_host_img" src="../img/host_pic.webp">
+                <div class="board_text">
+                  <p class="board_channel">暴雪游戏频道</p>
+                  <p class="board_brief">《陆雪的诗》</p>
+                  <p class="board_type">炉石传说</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
-    <script src="" async defer></script>
-  </body>
+  </div>
+  </div>
+  <script src="" async defer></script>
+</body>
+
 </html>
