@@ -11,6 +11,9 @@ body {
 img{
   border-radius: 2px;
 }
+input{
+  color: black;
+}
 h1 {
   color: black;
   font-size: 1.5em;
@@ -58,49 +61,49 @@ aside:hover,.btn:hover{
   padding-top: 30px;
   flex-shrink: 0;
 }
-
-
 .mini_header,
 .mini_header_content,
-.signin,
 .nav_user_center,
 .center_wrap > .beginner,
 .begin_show_container,
 .center,.center_wrap {
   display: flex;
   flex-shrink: 0;
-  
 }
-
+.distrcit_item_name,.fast_pick_item span,.sorts_activity_item span,.section_words,.section_intro_title,.first_rank_cartoon_title,.for_nowrap,.drama_title,.ani_item_title,.board_channel,.section_up,.column_title,.section_ad p{
+  transition: color 0.2s;
+}
+.distrcit_item_name:hover,.fast_pick_item span:hover,.sorts_activity_item span:hover,.section_words:hover,.section_intro_title:hover,.first_rank_cartoon_title:hover,.for_nowrap:hover,.drama_title:hover,.ani_item_title:hover,.board_channel:hover,.section_up:hover,.column_title:hover,.section_ad p:hover{
+  color: deepskyblue!important;
+  cursor: pointer;
+}
+.section_column_item:hover,.section_item:hover,.new_drama_item:hover,.signin_item:hover,.contribute_btn:hover,.play_broad_container:hover,.suggest_video_item:hover{
+  cursor: pointer;
+}
 .mini_header {
   height: 150px;
- background-image:url(../img/background.png);;
+ background-image:url(../img/background.png);
 }
 .mini_header_content {
-  width: 95%;
-  justify-content: space-between;
+  width:100%;
   height: 50px;
   align-items: center;
+  justify-content: space-between;
 }
-.nav_link_ul {
-  list-style: none;
-  width: 550px;
-  flex-shrink: 0;
+.mini_header_content>ul{
+  min-width: 550px;
+  margin-right: 20px;
 }
-.nav_link_item {
+.nav_link_item,.signin_item {
   padding: 10px;
   float: left;
-  text-align: center;
-}
-.signin {
   text-align: center;
 }
 .signin_item {
   float: left;
-  margin-top: 5px;
-  padding: 10px;
 }
 .contribute_btn {
+  display: inline-block;
   margin-top: 5px;
   padding: 5px;
   width: 50px;
@@ -108,27 +111,45 @@ aside:hover,.btn:hover{
   line-height: 30px;
   background-color: pink;
   border-radius: 4px;
+  text-align: center;
 }
-.contribute_text {
-  text-indent: 1em;
+.nav_search{
+width:400px;
+height:30px;
+border-radius: 2px;
+background-color: #f2f2f5;
+display: flex;
 }
 .nav_search_keyword {
-  margin-top: 10px;
-  flex: 1;
-  padding: 10px;
-  width: 200px;
+  float: left;
+  flex:10;
+  height:30px;
+  line-height:30px;
+  padding:0 5px;
+  outline: none;
+  border-style:none;
+  box-sizing: border-box;
+}
+.nav_search_btn{
+  width:30px;
+  flex:1;
+  border-style:none;
+  background: url(../img/search.png) no-repeat;
 }
 .search_icon {
-  width: 50px;
-  height: 50px;
+  display: inline-block;
 }
 .search_icon_img,
 board_host_img {
   border-radius: 50%;
   width: 36px;
-  height: 36px;
-  padding: 10px;
+  height: 36px; 
   display: inline-block;
+  line-height: 36px;
+}
+.board_host_img {
+  vertical-align: top;
+  padding: 10px;
 }
 .board_rank_img {
   border-radius: 50%;
@@ -184,10 +205,7 @@ board_host_img {
   padding-left: 5px;
   padding-bottom: 5px;
 }
-.distrcit_item_name:hover {
-  color: deepskyblue;
-  cursor: pointer;
-}
+
 .district_items > .distrcit_item_number {
   border-radius: 2px;
   background-color: deepskyblue;
@@ -470,9 +488,7 @@ board_host_img {
   font-size: 0.8em;
   color: grey;
 }
-.board_host_img {
-  vertical-align: top;
-}
+
 .tab_top{
   display: inline-block
 }
