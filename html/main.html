@@ -60,8 +60,15 @@
           </li>
         </ul>
         <div class="nav_search">
-          <input type="text" class="nav_search_keyword" placeholder="田宇阳复刻的B站"/>
-          <input type="button" class="nav_search_btn"/>
+          <input type="text" id="nav_search_keyword" placeholder="田宇阳复刻的B站"/>
+          <input type="button" id="nav_search_btn"/>
+          <ul id="input_history_list">
+            <li class="input_histoy_item"><span class="history_item_title">捭阖</span><span data-index="0" class="delete_btn">×</span></li>
+            <li class="input_histoy_item"><span class="history_item_title">隐秘的角落</span><span data-index="1" class="delete_btn">×</span></li>
+            <li class="input_histoy_item"><span class="history_item_title">恶之花</span><span data-index="2" class="delete_btn">×</span></li>
+            <li class="input_histoy_item"><span class="history_item_title">真相辩论</span><span data-index="3" class="delete_btn">×</span></li>
+            <li class="input_histoy_item"><span class="history_item_title">RunningMan</span><span data-index="4" class="delete_btn">×</span></li>
+          </ul>
         </div>
         <ul class="signin_ul"> 
             <li class="signin_item search_icon">
@@ -191,24 +198,26 @@
               <p class="broad_text">words3</p>
             </li>
             <li class="broad_item">
-              <img src="../img/play3.jpg@880w_388h_1c_95q" alt="4" />
+              <img src="../img/play4.jpg@880w_388h_1c_95q" alt="4" />
               <p class="broad_text">words4</p>
             </li>
-            <li class="broad_item">
+            <li class="broad_item" style="margin-right: 20px;">
               <img src="../img/play5.png@880w_388h_1c_95q" alt="4" />
               <p class="broad_text">words5</p>
             </li>
           </ul>
-          <div class="eats_buttoms">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+          <div id="eats_buttons">
+            <span class="span_on" data-skip="1" ></span>
+            <span class="span_off" data-skip="2"></span>
+            <span class="span_off" data-skip="3"></span>
+            <span class="span_off" data-skip="4"></span>
+            <span class="span_off" data-skip="5"></span>
           </div>
-          <a class="arrow" id="prev">更多 ></a>
+          <a class="arrow" >更多 ></a>
         </div>
         <ul id="suggest_video_list">
+          <div class="click-btn" id="prev"><</div>
+          <div class="click-btn" id="next">></div>
           <li class="suggest_video_item">
             <img src="../img/suggest_video_pic.jpg" alt="1" />
             <div class="suggeset_video_words">
@@ -6147,7 +6156,7 @@
     </section>
   </footer>
 
-  <script src="" async defer></script>
+  <script src="../JS/main.js" async defer></script>
 </body>
 
 </html>

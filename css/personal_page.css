@@ -6,8 +6,7 @@ body {
   font-family: sans-serif;
   font-size: 14px;
   color: black;
-  text-decoration: none;
- 
+  text-decoration: none; 
 }
 body{
     position: relative;
@@ -195,7 +194,7 @@ float: right;
     display: inline-block;
     width: 150px;
 }
-#my_name:hover,.relative_item:hover>.relative_number,.for_more:hover,.up_name:hover,.section_option:hover,.update_up_name,.topic_item>p:hover{
+#my_name:hover,.relative_item:hover>.relative_number,.for_more:hover,.up_name:hover,.section_option:hover,.update_up_name:hover,.topic_item>p:hover{
     color:#00a1d6 ;
 }
 .update_up_time:hover{
