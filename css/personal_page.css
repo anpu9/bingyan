@@ -1,0 +1,357 @@
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+ 
+}
+body{
+    position: relative;
+}
+input,textarea{
+    outline: none;
+    border: none;
+}
+li{
+    list-style: none;
+}
+div,ul{
+    overflow: hidden;
+     background-color: #ffffff;
+     border-radius: 5px;
+}
+.mini_header_content {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  height: 36px;
+  line-height: 36px;
+  padding: 10px 24px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.mini_header_content > ul {
+    flex-shrink: 0;
+  margin-right: 20px;
+}
+.nav_link_item,
+.signin_item {   
+padding-right: 10px;
+  float: left;
+  text-align: center;
+}
+.signin_item {
+  float: left;
+}
+.contribute_btn {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  background-color:#FB7299;
+  border-radius: 4px;
+  text-align: center;
+}
+.nav_search {
+  width: 400px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #f2f2f5;
+  display: flex;
+  border: 1px solid rgba(0,0,0,0.2);
+ 
+}
+.nav_search_keyword {
+  float: left;
+  flex: 10;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  outline: none;
+  border-style: none;
+  box-sizing: border-box;
+}
+.nav_search_btn {
+  width: 30px;
+  flex: 1;
+  border-style: none;
+  background: url(../img/search.png) no-repeat;
+}
+.search_icon {
+  display: inline-block;
+}
+.search_icon_img {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  line-height: 36px;
+}
+.page{
+    height: 100%;
+    display: flex;  
+    justify-content: center;
+    background-color: #d2e9fb;
+    padding-top: 10px;
+    height: 100%;
+}
+.left_column,.center_column,.right_column{
+    background-color: #d2e9fb;
+}
+.left_column,.living_title,.right_column,.center_column{
+    width: 224px;
+    margin-right: 10px;
+}
+.information_box{   
+    height: 188px;
+    position: relative;  
+    margin-bottom: 10px; 
+    border-radius: 2px;
+}
+#information_background{
+    width: 224px;    
+}
+.me_box{
+    background: transparent;
+    position: absolute;
+    left:20px;
+    top:30%;
+    height: 56px;
+    line-height: 56px;
+}
+#my_name{
+    font-size: 0.9em;
+    vertical-align: top;
+    padding-left: 5px;
+}
+#me_pic{
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+.my_relative_box{
+    display: flex;
+    width:224px;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 10%;
+}
+.relative_item>.relative_number{
+font-weight: bold;
+}
+.relative_item>.relative_type{
+    color: silver;
+    font-size: 0.5em;
+}
+.living_box,.comment_box,.ups_banner,.section_swicth,.updates_item,.billboard,.topic_box{
+    padding:15px;
+    margin-bottom: 10px; 
+    border-radius: 5px;
+}
+.new_updates{
+    margin-bottom: 10px; 
+    border-radius: 5px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+color: #e3b43d;
+font-size: 0.5em;
+background-color: #fcf9d7;
+}
+.topping>.for_more{    
+float: right;
+}
+#living_number{
+    color:silver
+}
+.grey_font{
+    font-size: 0.5em;
+    color: gray;
+}
+.living_items{
+    padding:10px 0;
+    width:214px;
+    height:70px;
+    
+}
+.up_pic{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.living_up_pic{
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 2px red;
+    margin-right: 10px;
+}
+.up_information_box{    
+    display: inline-block;
+    width: 150px;
+}
+#my_name:hover,.relative_item:hover>.relative_number,.for_more:hover,.up_name:hover,.section_option:hover,.update_up_name,.topic_item>p:hover{
+    color:#00a1d6 ;
+}
+.update_up_time:hover{
+    color: #FB7299;
+}
+#my_name,.relative_item>.relative_number,.for_more,.up_name,.section_option,.update_up_name,.topic_item>p,.update_up_time{
+    transition: color 0.2s;
+    cursor: pointer;
+}
+.center_column{
+    width:600px;
+}
+.input_box{
+    width: 100%;
+    height: auto;
+    resize: none;    
+}
+
+.editor_box>a{
+    margin:10px 10px;
+    float: left;
+    display: block;
+    width:24px;
+    height: 24px;
+}
+.editor_box>.post_btn{
+    cursor: pointer;
+    float:right;
+    background: #FB7299;
+    height: 30px;
+    width:60px;
+    color: snow;
+    margin-top: 7px;
+line-height: 30px;
+text-align: center;
+}
+.editor_box>a svg path{
+    transition: fill 0.2s;
+}
+.editor_box>a:hover svg path{
+fill:#00a1d6
+}
+.up_item{
+    display: inline-block;
+    width:62px;
+    margin:0 5px;
+}
+.up_item>.up_name{
+    display: block;
+       word-break:break-all;
+}
+.ups_list{
+  width: auto;
+    margin:0 20px;
+}
+.ups_banner{
+    position: relative;
+}
+.swicth-btn{
+    margin-top: 30px;
+    display: inline-block;
+    height: 100%;
+}
+#prev{
+    float: right ;
+}
+#next{
+    float:left;
+}
+.section_swicth{
+    border-radius: 5px;
+}
+.section_option{
+    color: silver;    
+    float: left;
+   padding-left: 15px;
+}
+.updates_list{
+ background: transparent;
+}
+.updates_item{
+    padding: 15px;
+    background: snow;
+}
+.update_up_pic{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+.update_content_box{
+    margin-left: 10px;
+    display: inline-block;
+    width: 500px;
+}
+.update_content_box>p,.video_txt_box>p{
+    margin-bottom: 10px;
+}
+.update_up_video_box{
+    width: 450px;
+    height: 129px;
+    border-radius: 5px;
+    padding-right: 10px;
+    overflow: hidden;
+    border: 0.5px rgba(0,0,0,0.1) solid;
+    margin-bottom: 10px;
+}
+.video_pic{
+    float: left;
+margin-right: 10px;
+    border-radius: 5px;
+    height: 129px;
+}
+.video_txt_box{
+    float: left;
+    width: 200px;
+}
+.video_brief{
+    height:38px;
+    line-height: 19px;
+    overflow: hidden;
+}
+.update_situation>a{
+ width: 50px;
+    height: 20px;
+    float: left;
+    margin-left: 60px;
+}
+.billboard_pic{
+    border-radius: 5px;
+height: 80px;
+margin-top: 10px;
+}
+.topic_item{
+    margin:10px 0;
+    overflow: hidden;
+}
+.topic_pic_box{
+    width:48px;
+    height: 18px;
+    float: left;
+}
+.topic_pic_box{
+    background:rgba(0,0,0,0.1);
+    border-radius: 16px;
+}
+.topic_icon{
+    display: inline-block;
+    border-radius: 50%;
+}
+.topic_item>p{
+    float: left;
+    margin-left: 10px;
+}
+.living_box,.topic_box{
+    position:sticky;
+    top:0;
+}

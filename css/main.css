@@ -109,7 +109,7 @@ aside:hover,.btn:hover{
   width: 50px;
   height: 30px;
   line-height: 30px;
-  background-color: pink;
+  background-color:#FB7299;;
   border-radius: 4px;
   text-align: center;
 }
@@ -543,7 +543,7 @@ board_host_img {
   vertical-align: middle;
   text-align: center;
   display: inline-block;
-  background-color: skyblue;
+  background-color: #00a1d6;
 }
 .tab_ranking_number {
   transform: translateY(-20px);
@@ -718,15 +718,15 @@ transform: translateY(5px);
   font-size: 1rem;
   width:112px;
   height: 30px;
-  border: 1px solid skyblue;
+  border: 1px solid #00a1d6;
   border-radius: 2px;
-  color: skyblue;
+  color: #00a1d6;
   text-align: center;
   line-height: 30px;
   transition: background,color 0.3s;
 }
 .new_drama_btn:hover{
-  background-color: skyblue;
+  background-color: #00a1d6;
   color: #f6f9fa;
 }
 .new_drama_iframe{
@@ -756,7 +756,7 @@ transform: translateY(5px);
   color: black;
 }
 .drama_txt_box>.drama_process{
-  color: skyblue;
+  color: #00a1d6;
   font-size: 0.5em;
   margin-top:30px;
 }
