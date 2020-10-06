@@ -60,19 +60,65 @@
           </li>
         </ul>
         <div class="nav_search">
-          <input type="text" id="nav_search_keyword" placeholder="田宇阳复刻的B站"/>
+          <input type="text" id="nav_search_keyword" />
           <input type="button" id="nav_search_btn"/>
+          <div id="scroll_window">
+            <ul id="scroll_list">
+              <li>我是谁</li>
+              <li>我在哪里</li>
+              <li>现在几点了</li>
+              <li>好的该睡了</li>
+              <li>睡什么睡</li>
+              <li>快写代码</li>
+            </ul>
+          </div>
           <ul id="input_history_list">
-            <li class="input_histoy_item"><span class="history_item_title">捭阖</span><span data-index="0" class="delete_btn">×</span></li>
-            <li class="input_histoy_item"><span class="history_item_title">隐秘的角落</span><span data-index="1" class="delete_btn">×</span></li>
-            <li class="input_histoy_item"><span class="history_item_title">恶之花</span><span data-index="2" class="delete_btn">×</span></li>
-            <li class="input_histoy_item"><span class="history_item_title">真相辩论</span><span data-index="3" class="delete_btn">×</span></li>
-            <li class="input_histoy_item"><span class="history_item_title">RunningMan</span><span data-index="4" class="delete_btn">×</span></li>
+            <li class="input_histoy_item" data-del="0"><span class="history_item_title">捭阖</span><span data-index="0" class="delete_btn">×</span></li>
+            <li class="input_histoy_item" data-del="1"><span class="history_item_title">隐秘的角落</span><span data-index="1" class="delete_btn">×</span></li>
+            <li class="input_histoy_item" data-del="2"><span class="history_item_title">恶之花</span><span data-index="2" class="delete_btn">×</span></li>
+            <li class="input_histoy_item" data-del="3"><span class="history_item_title">真相辩论</span><span data-index="3" class="delete_btn">×</span></li>
+            <li class="input_histoy_item" data-del="4"><span class="history_item_title">RunningMan</span><span data-index="4" class="delete_btn">×</span></li>
           </ul>
         </div>
         <ul class="signin_ul"> 
             <li class="signin_item search_icon">
-            <img class="search_icon_img" src="../img/anpu.webp" alt="" />
+            
+            <img class="search_icon_img" id="scale_img" src="../img/anpu.webp" alt="" />
+            <div id="my_card">
+            <h2 id="my_card_title">眼里的苹果</h2>
+            <div id="my_rank">等级5<span id="rank_value">12183/28800</span> </div>
+            <div id='process_box'><div id='process'></div>
+            </div>
+            <div id="coin_row">
+              <svg t="1601949856725" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5335" data-spm-anchor-id="a313x.7781069.0.i4" width="20" height="20"><path d="M518.4 966.4h-32c-57.6-6.4-115.2-19.2-166.4-44.8-57.6-25.6-102.4-64-140.8-108.8-38.4-44.8-70.4-96-89.6-153.6-19.2-57.6-25.6-115.2-25.6-172.8 6.4-57.6 19.2-115.2 44.8-166.4 25.6-57.6 64-102.4 108.8-140.8 44.8-38.4 96-70.4 153.6-89.6C416 64 467.2 57.6 518.4 57.6h32c57.6 6.4 115.2 19.2 166.4 44.8 57.6 25.6 102.4 64 140.8 108.8 44.8 51.2 83.2 115.2 96 192 6.4 12.8 0 25.6-6.4 32-6.4 6.4-12.8 6.4-19.2 6.4-6.4 0-19.2-6.4-19.2-12.8 0 0 0-6.4-6.4-6.4-12.8-64-44.8-115.2-89.6-166.4-70.4-76.8-166.4-128-268.8-134.4h-25.6c-44.8 0-96 6.4-140.8 25.6-38.4 19.2-83.2 38.4-115.2 70.4C179.2 288 134.4 384 128 492.8c-6.4 102.4 25.6 204.8 96 281.6 70.4 76.8 166.4 128 268.8 134.4h25.6c44.8 0 96-6.4 140.8-25.6 44.8-19.2 83.2-38.4 121.6-70.4 64-57.6 102.4-128 121.6-211.2 0-6.4 6.4-12.8 6.4-19.2 6.4-6.4 12.8-6.4 19.2-6.4 6.4 0 12.8 0 19.2 6.4 6.4 0 12.8 6.4 12.8 19.2-19.2 96-70.4 185.6-140.8 249.6-44.8 38.4-96 70.4-153.6 89.6-51.2 19.2-102.4 25.6-147.2 25.6z m-44.8-236.8V486.4h-6.4l-57.6 19.2c-6.4 0-19.2 6.4-32 6.4-12.8 6.4-32 6.4-38.4 12.8v128H268.8V454.4h70.4v32h6.4c6.4 0 19.2-6.4 25.6-6.4 12.8 0 25.6-6.4 32-6.4 19.2-12.8 44.8-19.2 64-25.6v-51.2c-38.4 0-76.8 6.4-108.8 6.4H281.6l-12.8-51.2H384c38.4 0 76.8-6.4 115.2-12.8L614.4 320c38.4-6.4 70.4-19.2 108.8-25.6 6.4 12.8 12.8 25.6 12.8 38.4v6.4s0 6.4 6.4 6.4c0 6.4 0 6.4 6.4 12.8 0 0 0 6.4 6.4 6.4-32 6.4-64 12.8-102.4 12.8-25.6 0-57.6 6.4-83.2 6.4h-25.6v38.4h76.8c32 0 57.6 6.4 76.8 19.2 19.2 6.4 32 19.2 44.8 25.6 12.8 12.8 19.2 19.2 19.2 32 6.4 12.8 6.4 25.6 6.4 32v102.4c-6.4 12.8-6.4 19.2-12.8 25.6-6.4 6.4-12.8 12.8-25.6 19.2h-38.4c-12.8 0-25.6-6.4-38.4-6.4-12.8-6.4-19.2-6.4-25.6-12.8-6.4-6.4-12.8-6.4-19.2-12.8l6.4-32c12.8 6.4 25.6 12.8 32 12.8h12.8c6.4 0 6.4 0 12.8-6.4 6.4 0 6.4-6.4 12.8-12.8 0-6.4 6.4-12.8 6.4-19.2v-51.2-12.8V512c0-6.4 0-12.8-6.4-12.8-6.4-6.4-12.8-12.8-25.6-19.2-12.8-6.4-25.6-6.4-38.4-6.4H582.4 544v249.6l-70.4 6.4z m0 0" p-id="5336" fill="#1296db"></path></svg><span>533.8</span><svg t="1601949969200" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7381" width="20" height="20"><path d="M480.153279 16.454785c-260.565823 0-471.855902 211.25987-471.855902 471.854895 0 260.564816 211.290079 471.854895 471.855902 471.854895 260.565823 0 471.854895-211.290079 471.854895-471.854895C952.009181 227.714656 740.720108 16.454785 480.153279 16.454785zM480.153279 897.251529c-225.851774 0-408.941849-183.090075-408.941849-408.941849 0-225.883997 183.090075-408.940842 408.941849-408.940842 225.851774 0 408.941849 183.057852 408.941849 408.940842C889.095128 714.161454 706.005053 897.251529 480.153279 897.251529z" p-id="7382" fill="#efb336"></path><path d="M577.351408 475.284612c19.045702-9.368786 33.17843-21.68898 42.701281-36.987772 9.275138-15.358203 14.006858-31.578366 14.006858-49.027024 0-18.556318-5.284543-36.401719-15.911025-53.391202-10.569086-17.111325-25.254637-29.706421-43.932797-37.938345-18.736564-8.171506-43.559214-12.287972-74.463921-12.287972L347.62786 285.652297l0 405.286572 154.582947 0c25.744021 0 47.555851-2.273723 65.432468-6.697312 17.694357-4.547446 32.501751-11.241737 44.298325-20.089923 11.796574-8.787768 21.68898-21.380849 29.73663-37.724869 7.987232-16.342006 11.978834-33.91452 11.978834-52.929006 0-23.593148-6.572449-44.052626-19.722381-61.471075C620.727354 494.791503 601.928358 482.53374 577.351408 475.284612zM401.265768 333.544473l80.97998 0c29.118355 0 49.701689 1.811527 61.743962 5.589653 11.92043 3.778126 21.195568 10.751346 27.585757 21.011294 6.514045 10.200537 9.710146 22.088745 9.710146 35.54278 0 14.16193-3.503225 25.990727-10.384811 35.359512-6.943011 9.460419-17.202959 16.189954-30.844289 20.213779-10.321373 3.133669-27.278633 4.699497-51.116472 4.699497l-87.675278 0L401.264762 333.544473zM590.131784 607.626763c-5.406385 9.830982-12.103698 17.324802-20.520903 22.485488-8.232931 5.160686-18.616735 8.847179-30.904707 11.05847-7.064854 1.353359-19.230983 1.966599-36.49436 1.966599L401.265768 643.13732l0-139.283148 93.75935 0c25.741 0 45.523799 2.211291 59.348396 6.727521 13.64133 4.453798 24.393683 12.317174 32.132195 23.468284 7.74254 11.182326 11.613306 24.330245 11.613306 39.445769C598.118009 586.367756 595.414313 597.795781 590.131784 607.626763z" p-id="7383" fill="#efb336"></path></svg>
+              <span>0</span><svg t="1601950064444" class="coin_right" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8861" width="20" height="20"><path d="M512 16C238.064 16 16 238.064 16 512s222.064 496 496 496 496-222.064 496-496S785.936 16 512 16zM307.488 346.672l409.008 0c5.184 0 10.064 1.232 14.464 3.296l-196.688 138.064c-17.104 17.12-27.696 17.12-44.8 0l-196.608-137.984C297.328 347.936 302.24 346.672 307.488 346.672zM750.816 652.192c0 18.96-15.36 34.336-34.304 34.336L307.488 686.528c-18.944 0-34.304-15.376-34.304-34.336L273.184 391.296c0-1.728 0.256-3.376 0.512-5.024l201.92 143.312c20.096 20.112 52.688 20.112 72.784 0l201.92-143.312c0.24 1.648 0.512 3.296 0.512 5.024L750.832 652.192z" p-id="8862" fill="#bfbfbf"></path></svg><svg t="1601950121244" class="coin_right" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9751" width="20" height="20"><path d="M509.835707 702.789301m-34.844599 0a34.051 34.051 0 1 0 69.689199 0 34.051 34.051 0 1 0-69.689199 0Z" p-id="9752" fill="#1296db"></path><path d="M553.129746 278.276864c0-1.877767-1.521656-3.399423-3.399423-3.399423L465.454918 274.877441c-1.877767 0-3.399423 1.521656-3.399423 3.399423l0 2.410909c0 1.877767 1.521656 3.399423 3.399423 3.399423l84.275405 0c1.877767 0 3.399423-1.521656 3.399423-3.399423L553.129746 278.276864z" p-id="9753" fill="#1296db"></path><path d="M640.228453 304.553321 379.517663 304.553321c-6.801916 0-13.651928 5.859451-13.651928 11.645225L365.865735 632.222105c0 5.785773 6.850012 8.998955 13.651928 8.998955l260.71079 0c6.80294 0 11.139711-3.213181 11.139711-8.998955L651.368164 316.198545C651.367141 310.412772 647.030369 304.553321 640.228453 304.553321z" p-id="9754" fill="#1296db"></path><path d="M511.62547 64.993247c-246.710938 0-446.708971 199.999057-446.708971 446.708971S264.914532 958.411189 511.62547 958.411189s446.708971-199.999057 446.708971-446.708971S758.336408 64.993247 511.62547 64.993247zM676.949796 741.605352c0 14.688537-9.93221 26.5067-23.119557 26.5067L369.682667 768.112052c-13.187347 0-25.307386-11.818163-25.307386-26.5067L344.375282 281.504372c0-14.688537 12.120039-27.092032 25.307386-27.092032l284.147572 0c13.187347 0 23.119557 12.404518 23.119557 27.092032L676.949796 741.605352z" p-id="9755" fill="#1296db"></path></svg>
+            </div>
+            <div class="my_relative_box">
+              <div class="relative_item">
+                <p class="relative_type">关注</p>
+                <p class="relative_number">160</p>
+              </div>
+              <div class="relative_item">
+                <p class="relative_type">粉丝</p>
+                <p class="relative_number">160</p>
+              </div>
+              <div class="relative_item">
+                <p class="relative_type">动态</p>
+                <p class="relative_number">160</p>
+              </div>
+            </div>
+            <ul id="my_card_list">
+              <li class="my_card_item">
+                <svg t="1601951269111" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10588" width="20" height="20"><path d="M922.9 758.3c-22.5-53.3-54.7-101-95.8-142.1-41.1-41.1-88.9-73.3-142.1-95.8-17.7-7.4-35.7-13.7-54.1-18.9 67.8-40.8 113.2-115 113.2-199.8 0-128.5-104.6-233.1-233.1-233.1s-233.2 104.5-233.2 233c0 84.7 45.4 159 113.2 199.8-18.4 5.1-36.4 11.4-54.1 18.9-53.3 22.5-101 54.7-142.1 95.8-41.1 41.1-73.3 88.9-95.8 142.2-23.3 55.2-35.1 113.7-35.1 174 0 13.7 11 24.8 24.8 24.8 13.7 0 24.8-11 24.8-24.8 0-219.2 178.4-397.5 397.5-397.5 219.2 0 397.5 178.4 397.5 397.5 0 13.7 11 24.8 24.8 24.8 13.7 0 24.8-11 24.8-24.8-0.1-60.3-11.9-118.9-35.2-174zM327.4 301.6C327.4 200.4 409.7 118 511 118c101.2 0 183.6 82.3 183.6 183.6 0 101.2-82.3 183.6-183.6 183.6s-183.6-82.4-183.6-183.6z m0 0" p-id="10589" fill="#bfbfbf"></path>
+                </svg><span class="my_card_item_txt">个人中心</span>
+              </li>
+              <li class="my_card_item">
+                <svg t="1601951269111" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10588" width="20" height="20"><path d="M922.9 758.3c-22.5-53.3-54.7-101-95.8-142.1-41.1-41.1-88.9-73.3-142.1-95.8-17.7-7.4-35.7-13.7-54.1-18.9 67.8-40.8 113.2-115 113.2-199.8 0-128.5-104.6-233.1-233.1-233.1s-233.2 104.5-233.2 233c0 84.7 45.4 159 113.2 199.8-18.4 5.1-36.4 11.4-54.1 18.9-53.3 22.5-101 54.7-142.1 95.8-41.1 41.1-73.3 88.9-95.8 142.2-23.3 55.2-35.1 113.7-35.1 174 0 13.7 11 24.8 24.8 24.8 13.7 0 24.8-11 24.8-24.8 0-219.2 178.4-397.5 397.5-397.5 219.2 0 397.5 178.4 397.5 397.5 0 13.7 11 24.8 24.8 24.8 13.7 0 24.8-11 24.8-24.8-0.1-60.3-11.9-118.9-35.2-174zM327.4 301.6C327.4 200.4 409.7 118 511 118c101.2 0 183.6 82.3 183.6 183.6 0 101.2-82.3 183.6-183.6 183.6s-183.6-82.4-183.6-183.6z m0 0" p-id="10589" fill="#bfbfbf"></path>
+                </svg><span class="my_card_item_txt">个人中心</span>
+              </li>
+              </ul>
+          
+            </div>
             </li>
             <li class="signin_item"><span>大会员</span></li>
             <li class="signin_item"><span>消息</span></li>
@@ -86,7 +132,7 @@
         </ul>
       </div>
     </header>
-    <aside><a href="#">联系客服</a></aside>
+    
     <div class="center_wrap" id="begin">
       <div class="beginner">
         <ul class="beginner_fast_pick">
@@ -204,6 +250,10 @@
             <li class="broad_item" style="margin-right: 20px;">
               <img src="../img/play5.png@880w_388h_1c_95q" alt="4" />
               <p class="broad_text">words5</p>
+            </li>
+            <li class="broad_item">
+              <img src="../img/play1.png@880w_388h_1c_95q" alt="1" />
+              <p class="broad_text">words1</p>
             </li>
           </ul>
           <div id="eats_buttons">
@@ -607,14 +657,14 @@
             </li>
           </ul>
         </div>
-        <div class="tab_box">
-          <ul class="tab_top">
-            <li>直播排行</li>
-            <li>关注的主播</li>
-            <li>为你推荐</li>
+        <div id="tab_box">
+          <ul class="tab_top" id="live_tab_top">
+            <li data-tab="0" class="selected">直播排行</li>
+            <li data-tab="1">关注的主播</li>
+            <li data-tab="2">为你推荐</li>
           </ul>
-          <div class="tab_bottom_list">
-            <ol class="tab_bottom_item host_ranking">
+          <div id="tab_bottom_list">
+            <ul class="tab_bottom_item" id="host_ranking">
               <li>
                 <span class="ranking_number tab_ranking_number">1</span><img class="board_rank_img"
                   src="../img/board_rank_img.webp" />
@@ -669,8 +719,8 @@
                 </div>
                 <p class="tab_listener_number">232.2万</p>
               </li>
-            </ol>
-            <ul class="follow_ups">
+            </ul>
+            <ul class="tab_bottom_item" id="follow_ups">
               <li>
                 <img class="board_rank_img" src="../img/board_rank_img.webp" />
                 <div class="host_txt">
@@ -680,6 +730,10 @@
                 <p class="tab_listener_number">232.2万</p>
               </li>
             </ul>
+            <div class="right_ad tab_bottom_item" id="pick_for">
+              <h1>特别推荐</h1>
+              <img class="right_ad_pic" src="../img/right_ad_pic.webp">
+            </div>
           </div>
         </div>
       </section>
@@ -860,19 +914,20 @@
         <div class="timetable_box">
           <div class="section_intro">
             <img src="../img/drama.png" class="section_intro_icon" /><span class="section_intro_title">番剧</span>
-            <ul class="time_switch">
-              <li>最新</li>
-              <li>周一</li>
-              <li>周二</li>
-              <li>周三</li>
-              <li>周四</li>
-              <li>周五</li>
-              <li>周六</li>
-              <li>周日</li>
+            <ul class="time_switch" id="drama_switch">
+              <li data-tab="0"class="selected">最新</li>
+              <li data-tab="1">周一</li>
+              <li data-tab="2">周二</li>
+              <li data-tab="3">周三</li>
+              <li data-tab="4">周四</li>
+              <li data-tab="5">周五</li>
+              <li data-tab="6">周六</li>
+              <li data-tab="7">周日</li>
             </ul>
             <div class="new_drama_btn">新番时间表 ></div>
           </div>
-          <ul class="new_drama_iframe" id="latest">
+          <ul id="iframe_list">
+          <ul class="new_drama_iframe " id="latest">
             <li class="new_drama_item"><img src="../img/kenan.webp">
               <div class="drama_txt_box">
                 <h3 class="drama_title">名侦探柯南</h3>
@@ -994,6 +1049,415 @@
               </div>
             </li>
           </ul>
+          <ul class="new_drama_iframe" id="Mon">
+            <li class="new_drama_item"><img src="../img/drama2.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama2.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama2.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama2.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          </ul>
+          <ul class="new_drama_iframe" id="Tues">
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li> <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li> <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li> <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          
+          </ul>
+          <ul class="new_drama_iframe" id="Wed">
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+    
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          </ul>
+          <ul class="new_drama_iframe" id="Thur">
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          </ul>
+          <ul class="new_drama_iframe" id="Fri">
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>         
+          </ul>
+          <ul class="new_drama_iframe" id="Sat">
+            <li class="new_drama_item"><img src="../img/drama5.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama5.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama5.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          </ul>
+          <ul class="new_drama_iframe" id="Sun">
+            <li class="new_drama_item"><img src="../img/drama6.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama6.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama5.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama6.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          </ul>
+        </ul>
         </div>
         <div class="real_ranking">
           <h1>排行榜</h1>
@@ -1146,7 +1610,7 @@
 
         </div>
         <div class="right_ad">
-          <h1>排行榜</h1>
+          <h1>特别推荐</h1>
           <img class="right_ad_pic" src="../img/right_ad_pic.webp">
         </div>
     </div>
@@ -1155,19 +1619,20 @@
         <div class="timetable_box">
           <div class="section_intro">
             <img src="../img/nation.png" class="section_intro_icon" /><span class="section_intro_title">国创</span>
-            <ul class="time_switch">
-              <li>最新</li>
-              <li>周一</li>
-              <li>周二</li>
-              <li>周三</li>
-              <li>周四</li>
-              <li>周五</li>
-              <li>周六</li>
-              <li>周日</li>
+            <ul class="time_switch" id="nation_switch">
+              <li data-tab="0"class="selected">最新</li>
+              <li data-tab="1">周一</li>
+              <li data-tab="2">周二</li>
+              <li data-tab="3">周三</li>
+              <li data-tab="4">周四</li>
+              <li data-tab="5">周五</li>
+              <li data-tab="6">周六</li>
+              <li data-tab="7">周日</li>
             </ul>
             <div class="new_drama_btn">新番时间表 ></div>
           </div>
-          <ul class="new_drama_iframe" id="latest">
+          <ul>
+          <ul class="new_drama_iframe new_nation_iframe" id="_latest">
             <li class="new_drama_item"><img src="../img/ashuai.webp">
               <div class="drama_txt_box">
                 <h3 class="drama_title">名侦探柯南</h3>
@@ -1289,6 +1754,415 @@
               </div>
             </li>
           </ul>
+          <ul class="new_drama_iframe new_nation_iframe" id="_Mon">
+            <li class="new_drama_item"><img src="../img/drama2.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama2.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama2.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama2.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          </ul>
+          <ul class="new_drama_iframe new_nation_iframe" id="_Tues">
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li> <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li> <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li> <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          
+          </ul>
+          <ul class="new_drama_iframe new_nation_iframe" id="_Wed">
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+    
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          </ul>
+          <ul class="new_drama_iframe new_nation_iframe" id="_Thur">
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          </ul>
+          <ul class="new_drama_iframe new_nation_iframe" id="_Fri">
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li><li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama4.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>         
+          </ul>
+          <ul class="new_drama_iframe new_nation_iframe" id="_Sat">
+            <li class="new_drama_item"><img src="../img/drama5.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama5.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama5.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          </ul>
+          <ul class="new_drama_iframe new_nation_iframe" id="_Sun">
+            <li class="new_drama_item"><img src="../img/drama6.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>            
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama1.png">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/kenan.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama6.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama5.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+            <li class="new_drama_item"><img src="../img/drama6.webp">
+              <div class="drama_txt_box">
+                <h3 class="drama_title">名侦探柯南</h3>
+                <h4 class="drama_process">第1040话</h4>
+              </div>
+            </li>
+          </ul>
+        </ul>
         </div>
         <div class="real_ranking">
           <h1>排行榜</h1>
@@ -1606,15 +2480,15 @@
         <div class="ani_box">
           <div class="section_intro">
             <img src="../img/ani_logo.png" class="section_intro_icon" /><span class="section_intro_title">漫画</span>
-            <ul class="time_switch">
-              <li>人气推荐</li>
-              <li>免费漫画推荐</li>
-              <li>下载APP</li>
+            <ul class="time_switch" id="ani_switch">
+              <li data-tab="0" class="selected">人气推荐</li>
+              <li data-tab="1">免费漫画推荐</li>
+              <a id="download" href="https://manga.bilibili.com/app-download?from=manga_homepage&spm_id_from=333.851.b_62696c695f7265706f72745f6d616e6761.2" target="_blank">下载APP</a>
             </ul>
             <div class="btn exchange-btn">换一换</div>
             <div class="btn more-btn"> 更多 ></div>
           </div>
-          <div class="ani_content">
+          <div id="ani_content">
             <ul class="ani_list" id="hot_ani">
               <li class="ani_item">
                 <img src="../img/ani_item_pic.webp">
@@ -1667,11 +2541,64 @@
                 <span class="ani_item_type">恋爱 古风</span>
               </li>
             </ul>
+            <ul class="ani_list" id="free_ani">
+              <li class="ani_item">
+                <img src="../img/ani_item2_pic.webp">
+                <h2 class="ani_item_title">王妃的修仙指南</h2>
+                <span class="ani_item_type">恋爱 古风</span>
+              </li>
+              <li class="ani_item">
+                <img src="../img/ani_item2_pic.webp">
+                <h2 class="ani_item_title">王妃的修仙指南</h2>
+                <span class="ani_item_type">恋爱 古风</span>
+              </li>
+              <li class="ani_item">
+                <img src="../img/ani_item2_pic.webp">
+                <h2 class="ani_item_title">王妃的修仙指南</h2>
+                <span class="ani_item_type">恋爱 古风</span>
+              </li>
+              <li class="ani_item">
+                <img src="../img/ani_item2_pic.webp">
+                <h2 class="ani_item_title">王妃的修仙指南</h2>
+                <span class="ani_item_type">恋爱 古风</span>
+              </li>
+              <li class="ani_item">
+                <img src="../img/ani_item2_pic.webp">
+                <h2 class="ani_item_title">王妃的修仙指南</h2>
+                <span class="ani_item_type">恋爱 古风</span>
+              </li>
+              <li class="ani_item">
+                <img src="../img/ani_item2_pic.webp">
+                <h2 class="ani_item_title">王妃的修仙指南</h2>
+                <span class="ani_item_type">恋爱 古风</span>
+              </li>
+              <li class="ani_item">
+                <img src="../img/ani_item2_pic.webp">
+                <h2 class="ani_item_title">王妃的修仙指南</h2>
+                <span class="ani_item_type">恋爱 古风</span>
+              </li>
+              <li class="ani_item">
+                <img src="../img/ani_item2_pic.webp">
+                <h2 class="ani_item_title">王妃的修仙指南</h2>
+                <span class="ani_item_type">恋爱 古风</span>
+              </li>
+              <li class="ani_item">
+                <img src="../img/ani_item2_pic.webp">
+                <h2 class="ani_item_title">王妃的修仙指南</h2>
+                <span class="ani_item_type">恋爱 古风</span>
+              </li>
+              <li class="ani_item">
+                <img src="../img/ani_item2_pic.webp">
+                <h2 class="ani_item_title">王妃的修仙指南</h2>
+                <span class="ani_item_type">恋爱 古风</span>
+              </li>
+            </ul>
+            
           </div>
         </div>
         <div class="real_ranking">
           <h1>排行榜</h1>
-          <ul class="tab_top tab_ani">
+          <ul class="tab_top" id="tab_ani">
             <li>月票</li>
             <li>应援</li>
             <li>应援</li>
@@ -2859,7 +3786,7 @@
 
       </div>
       <div class="right_ad">
-        <h1>排行榜</h1>
+        <h1></h1>
         <img class="right_ad_pic" src="../img/right_ad_pic.webp">
       </div>
   </div>
@@ -6155,7 +7082,7 @@
       </div>
     </section>
   </footer>
-
+  <aside ><a href="#">联系客服</a></aside>
   <script src="../JS/main.js" async defer></script>
 </body>
 

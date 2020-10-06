@@ -7,21 +7,19 @@ body {
   font-size: 14px;
   color: aliceblue;
   text-decoration: none;
+
 }
-img,.suggest_video_item{
+img,.suggest_video_item,#my_card{
   border-radius: 2px;
 }
-input{
-  color: black;
-}
+
 h1 {
   color: black;
   font-size: 1.5em;
   margin-bottom: 20px;
 }
-h2 {
-  color: black;
-  
+h2,input,#my_rank,#coin_row>span,.relative_number,.my_card_item_txt {
+  color: black; 
 }
 li {
   list-style: none;
@@ -39,7 +37,7 @@ aside{
   left: 0;
   top:40vh;
   transition: background 0.5s;
-  
+  z-index: 3;
 }
 aside>a{
   display: block;
@@ -52,8 +50,7 @@ padding-left: 4px;
   font-size: 0.8em;
 }
 aside:hover,.btn:hover{
-  background: rgba(0, 0, 0, 0.05);
-  
+  background: rgba(0, 0, 0, 0.05); 
 }
 .link_box {
   height: 400px;
@@ -73,8 +70,15 @@ aside:hover,.btn:hover{
 .distrcit_item_name,.fast_pick_item span,.sorts_activity_item span,.section_words,.section_intro_title,.first_rank_cartoon_title,.for_nowrap,.drama_title,.ani_item_title,.board_channel,.section_up,.column_title,.section_ad p{
   transition: color 0.2s;
 }
+.selected{
+ border-bottom: 1px solid #00a1d6; 
+}
+.unselected{
+  border-bottom:none;
+}
+
 .distrcit_item_name:hover,.fast_pick_item span:hover,.sorts_activity_item span:hover,.section_words:hover,.section_intro_title:hover,.first_rank_cartoon_title:hover,.for_nowrap:hover,.drama_title:hover,.ani_item_title:hover,.board_channel:hover,.section_up:hover,.column_title:hover,.section_ad p:hover{
-  color: deepskyblue!important;
+  color: #00a1d6!important;
   cursor: pointer;
 }
 .section_column_item:hover,.section_item:hover,.new_drama_item:hover,.signin_item:hover,.contribute_btn:hover,.play_broad_container:hover,.suggest_video_item:hover{
@@ -170,7 +174,7 @@ flex-wrap: wrap;
    flex:1;
    float: left;
 }
-.input_histoy_item:hover{
+.input_histoy_item:hover,.my_card_item:hover{
   background: rgba(0, 0, 0, 0.05);
 }
 .delete_btn{
@@ -178,9 +182,10 @@ flex-wrap: wrap;
   font-size: 1.5em;
   vertical-align: top;
   float: right;
-  
+  cursor: pointer;
 }
 #nav_search_keyword {
+  position: relative;
   float: left;
   flex:10;
   height:30px;
@@ -198,6 +203,111 @@ flex-wrap: wrap;
 }
 .search_icon {
   display: inline-block;
+  position: relative;
+}
+#scroll_list{
+  left: 5px;
+  position: absolute;
+  width: 100px;
+}
+#scroll_list>li{
+height: 30px;
+line-height: 30px;
+color: silver;
+}
+#my_card{ 
+  visibility: hidden;
+  transition: visibility 0.05s ease-out;
+  position: absolute;
+  padding:15px;
+  width: 200px;
+  height: auto;
+  top:50px;
+  left:-80px;
+  background: snow;
+  z-index: 2;
+  text-align: left;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+#my_card_title{
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+#my_rank{
+  padding-bottom: 15px;
+}
+
+#rank_value{
+  float: right;
+  font-size: 0.5em;
+  color: silver;
+}
+#process_box{
+  display: flex;
+  height: 2px;
+  background-color:rgba(0, 0, 0, 0.1);
+}
+#process{
+  flex-basis: 33%;
+  background-color: orange;
+}
+#coin_row{
+  padding:10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#coin_row>span{
+  vertical-align: top;
+  padding-right: 5px;
+}
+.coin_right{
+  float: right;
+  margin-right: 5px;
+}
+.my_relative_box{
+  display: flex;
+  width:200px;
+  justify-content: space-between;
+ padding: 10px 20px;
+ box-sizing: border-box;
+  bottom: 10%;
+}
+.my_card_item_txt{
+  padding-left: 10px;
+  vertical-align: top;
+}
+.relative_item>.relative_number{
+font-weight: bold;
+}
+.relative_item:hover>.relative_number{
+  color:#00a1d6 ;
+}
+.relative_item>.relative_number{
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.relative_item>.relative_type{
+  color: silver;
+  font-size: 0.5em;
+}
+.my_card_item{
+  padding: 10px 0;
+}
+#scale_img{
+  transition: scale 0.1s ease-out;
+  z-index: 3;
+  position: relative;
+}
+#scale_img:hover{
+  transform: scale(2);
+  transform-origin: top;
+}
+.search_icon:hover #my_card{
+  visibility:visible;
+}
+.search_icon:hover #scale_img{
+  transform: scale(2);
+  transform-origin: top;
 }
 .search_icon_img,
 board_host_img {
@@ -316,7 +426,7 @@ board_host_img {
   position: relative;
 }
 #broad_list {
-  width: 3000px;
+  width: 4000px;
   height: 202px;
   position: absolute;
   left: 0;
@@ -448,7 +558,23 @@ box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.4);
   height: 36px;
   display: inline-block;
 }
+#ani_content,#iframe_list,#tab_bottom_list{
+  position: relative;
+}
+.ani_list,.new_drama_iframe,.new_nation_iframe,.tab_bottom_item,#pick_for{
+  background: snow;
+  position: absolute;
+  z-index:-1;
+}
+#pick_for{
+  left: 0;
+  top:0;
+}
+#hot_ani,#latest,#_latest,#host_ranking{
+  z-index: 1;
+  background: snow;
 
+}
 .btn {
   position: absolute;
   bottom: 0;
@@ -584,6 +710,7 @@ box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.4);
 .host_txt,
 .tab_listener_number {
   display: inline-block;
+  height: 44px;
 }
 .host_txt > .host_name {
   color: black;
@@ -593,7 +720,7 @@ box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.4);
 .host_txt > .host_brief {
   color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 50%;
+  top: 20px;
 }
 
 .tab_listener_number {
@@ -603,19 +730,17 @@ box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.4);
   top: 0;
   right: 0;
 }
-.tab_bottom_list {
+#tab_bottom_list {
   margin-top: 20px;
   position: relative;
 }
-.tab_bottom_item {
-  height: 364px;
-}
+
 .tab_bottom_item > li,
 .real_ranking_ol > li {
   margin-bottom: 17px;
   width: 300px;
 }
-.host_ranking > li {
+#host_ranking > li {
   position: relative;
   height: 44px;
 }
@@ -631,10 +756,10 @@ box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.4);
 .tab_ranking_number {
   transform: translateY(-20px);
 }
-.follow_ups {
+#follow_ups {
   position: absolute;
-  display: none;
   top: 0;
+  height: 400px;
 }
 
 .cartoon_first_rank,.ani_first_rank {
@@ -788,12 +913,13 @@ right:0;
 vertical-align: top;
 transform: translateY(5px);
 }
-.time_switch>li{
+.time_switch>li,.time_switch>a{
  display: inline-block;
-
  margin-right: 24px;
  color: black;
+ cursor: pointer;
 }
+
 .new_drama_btn{
   position: absolute;
   top:0;
