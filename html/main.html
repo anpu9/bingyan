@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../css/main.css" />
-  <link rel="stylesheet" media="screen and (max-width:1000px)" href="../css/response.css"/>
+  <link rel="stylesheet" media="screen and (max-width:1170px)" href="../css/response.css"/>
 </head>
 
 <body>
@@ -533,7 +533,7 @@
             <img src="../img/camera.png" class="section_intro_icon" /><span
               class="section_intro_title">正在直播</span><span id="live_boardcast">当前正有<span
                 id="live_number">27139</span>个在线直播</span>
-            <div class="btn exchange-btn">换一换</div>
+            <div class="btn exchange-btn small" id='live_btn'>换一换</div>
             <div class="btn more-btn"> 更多 ></div>
           </div>
           <ul id="section_host_list">
@@ -818,11 +818,11 @@
         <div class="section_twoline_content">
           <div class="section_intro">
             <img src="../img/cartoon_logo.png" class="section_intro_icon" /><span class="section_intro_title">动画</span>
-            <div class="btn exchange-btn">换一换</div>
+            <div class="btn exchange-btn small" id='cartoon_btn'>换一换</div>
             <div class="btn more-btn"> 更多 ></div>
           </div>
           <ul class="section_list">
-            <li class="section_item">
+            <li class="section_item cartoon_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" />
               <span class="section_video_play_sum">264.8万</span> <svg t="1601779045996" class="icon  likes"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18959" width="16"
@@ -834,7 +834,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item cartoon_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span> <svg t="1601779045996" class="icon  likes"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18959" width="16"
@@ -846,7 +846,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item cartoon_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span> <svg t="1601779045996" class="icon  likes"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18959" width="16"
@@ -858,7 +858,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item cartoon_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span> <svg t="1601779045996" class="icon  likes"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18959" width="16"
@@ -870,7 +870,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item cartoon_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span> <svg t="1601779045996" class="icon  likes"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18959" width="16"
@@ -882,21 +882,21 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item cartoon_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span><span
                 class="section_video_time">2:26:45</span>
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item cartoon_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span><span
                 class="section_video_time">2:26:45</span>
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item cartoon_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span> <svg t="1601779045996" class="icon  likes"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18959" width="16"
@@ -1629,53 +1629,53 @@
         <div class="section_twoline_content">
           <div class="section_intro">
             <span class="section_intro_title">番剧动态</span>
-            <div class="btn exchange-btn">换一换</div>
+            <div class="btn exchange-btn small" id='drama_btn'>换一换</div>
             <div class="btn more-btn"> 更多 ></div>
           </div>
           <ul class="section_list">
-            <li class="section_item">
+            <li class="section_item drama_change_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" />
               <span class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span>
               <p class="section_words">introduction1</p>
 
             </li>
-            <li class="section_item">
+            <li class="section_item drama_change_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span>
               <p class="section_words">introduction1</p>
 
             </li>
-            <li class="section_item">
+            <li class="section_item drama_change_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span>
               <p class="section_words">introduction1</p>
 
             </li>
-            <li class="section_item">
+            <li class="section_item drama_change_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span>
               <p class="section_words">introduction1</p>
 
             </li>
-            <li class="section_item">
+            <li class="section_item drama_change_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span>
               <p class="section_words">introduction1</p>
 
             </li>
-            <li class="section_item">
+            <li class="section_item drama_change_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span>
               <p class="section_words">introduction1</p>
 
             </li>
-            <li class="section_item">
+            <li class="section_item drama_change_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span>
               <p class="section_words">introduction1</p>
 
             </li>
-            <li class="section_item">
+            <li class="section_item drama_change_item">
               <img class="section_video" src="../img/cartoon_pic.webp" alt="1" /><span
                 class="section_video_play_sum">264.8万</span><span class="section_video_likes">3.1万</span>
               <p class="section_words">introduction1</p>
@@ -2315,11 +2315,11 @@
         <div class="section_twoline_content">
           <div class="section_intro">
             <span class="section_intro_title">国产原创相关</span>
-            <div class="btn exchange-btn">换一换</div>
+            <div class="btn exchange-btn  small" id='nation_btn'>换一换</div>
             <div class="btn more-btn"> 更多 ></div>
           </div>
           <ul class="section_list">
-            <li class="section_item">
+            <li class="section_item nation_item">
               <img class="section_video" src="../img/original_pic.webp" alt="1" />
               <svg t="1601778889997" class="icon" viewBox="0 0 1024 1024" version="1.1"
                 xmlns="http://www.w3.org/2000/svg" p-id="18159" width="16" height="16">
@@ -2339,7 +2339,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item nation_item">
               <img class="section_video" src="../img/original_pic.webp" alt="1" /><svg t="1601778889997" class="icon"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18159" width="16"
                 height="16">
@@ -2359,7 +2359,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item nation_item">
               <img class="section_video" src="../img/original_pic.webp" alt="1" /><svg t="1601778889997" class="icon"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18159" width="16"
                 height="16">
@@ -2379,7 +2379,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item nation_item">
               <img class="section_video" src="../img/original_pic.webp" alt="1" /><svg t="1601778889997" class="icon"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18159" width="16"
                 height="16">
@@ -2399,7 +2399,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item nation_item">
               <img class="section_video" src="../img/original_pic.webp" alt="1" /><svg t="1601778889997" class="icon"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18159" width="16"
                 height="16">
@@ -2419,7 +2419,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item nation_item">
               <img class="section_video" src="../img/original_pic.webp" alt="1" /><svg t="1601778889997" class="icon"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18159" width="16"
                 height="16">
@@ -2439,7 +2439,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item nation_item">
               <img class="section_video" src="../img/original_pic.webp" alt="1" /><svg t="1601778889997" class="icon"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18159" width="16"
                 height="16">
@@ -2459,7 +2459,7 @@
               <p class="section_words">introduction1</p>
               <p class="section_up">up1</p>
             </li>
-            <li class="section_item">
+            <li class="section_item nation_item">
               <img class="section_video" src="../img/original_pic.webp" alt="1" /><svg t="1601778889997" class="icon"
                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18159" width="16"
                 height="16">
@@ -2560,57 +2560,57 @@
               <li data-tab="1">免费漫画推荐</li>
               <a id="download" href="https://manga.bilibili.com/app-download?from=manga_homepage&spm_id_from=333.851.b_62696c695f7265706f72745f6d616e6761.2" target="_blank">下载APP</a>
             </ul>
-            <div class="btn exchange-btn">换一换</div>
+            <div class="btn exchange-btn large" id='ani_btn'>换一换</div>
             <div class="btn more-btn"> 更多 ></div>
           </div>
           <div id="ani_content">
-            <ul class="ani_list" id="hot_ani">
-              <li class="ani_item">
+            <ul class="ani_list" id="_hot_ani">
+              <li class="ani_item hot_ani">
                 <img src="../img/ani_item_pic.webp">
                 <h2 class="ani_item_title">王妃的修仙指南</h2>
                 <span class="ani_item_type">恋爱 古风</span>
               </li>
-              <li class="ani_item">
+              <li class="ani_item hot_ani">
                 <img src="../img/ani_item_pic.webp">
                 <h2 class="ani_item_title">王妃的修仙指南</h2>
                 <span class="ani_item_type">恋爱 古风</span>
               </li>
-              <li class="ani_item">
+              <li class="ani_item hot_ani">
                 <img src="../img/ani_item_pic.webp">
                 <h2 class="ani_item_title">王妃的修仙指南</h2>
                 <span class="ani_item_type">恋爱 古风</span>
               </li>
-              <li class="ani_item">
+              <li class="ani_item hot_ani">
                 <img src="../img/ani_item_pic.webp">
                 <h2 class="ani_item_title">王妃的修仙指南</h2>
                 <span class="ani_item_type">恋爱 古风</span>
               </li>
-              <li class="ani_item">
+              <li class="ani_item hot_ani">
                 <img src="../img/ani_item_pic.webp">
                 <h2 class="ani_item_title">王妃的修仙指南</h2>
                 <span class="ani_item_type">恋爱 古风</span>
               </li>
-              <li class="ani_item">
+              <li class="ani_item hot_ani">
                 <img src="../img/ani_item_pic.webp">
                 <h2 class="ani_item_title">王妃的修仙指南</h2>
                 <span class="ani_item_type">恋爱 古风</span>
               </li>
-              <li class="ani_item">
+              <li class="ani_item hot_ani">
                 <img src="../img/ani_item_pic.webp">
                 <h2 class="ani_item_title">王妃的修仙指南</h2>
                 <span class="ani_item_type">恋爱 古风</span>
               </li>
-              <li class="ani_item">
+              <li class="ani_item hot_ani">
                 <img src="../img/ani_item_pic.webp">
                 <h2 class="ani_item_title">王妃的修仙指南</h2>
                 <span class="ani_item_type">恋爱 古风</span>
               </li>
-              <li class="ani_item">
+              <li class="ani_item hot_ani">
                 <img src="../img/ani_item_pic.webp">
                 <h2 class="ani_item_title">王妃的修仙指南</h2>
                 <span class="ani_item_type">恋爱 古风</span>
               </li>
-              <li class="ani_item">
+              <li class="ani_item hot_ani">
                 <img src="../img/ani_item_pic.webp">
                 <h2 class="ani_item_title">王妃的修仙指南</h2>
                 <span class="ani_item_type">恋爱 古风</span>
@@ -2875,7 +2875,7 @@
         <div class="section_twoline_content">
           <div class="section_intro">
             <img src="../img/earpiece.png" class="section_intro_icon" /><span class="section_intro_title">音乐</span>
-            <div class="btn exchange-btn">换一换</div>
+            <div class="btn exchange-btn small" id='music_btn'>换一换</div>
             <div class="btn more-btn"> 更多 ></div>
           </div>
           <ul class="section_list">
@@ -3115,7 +3115,7 @@
         <div class="section_twoline_content">
           <div class="section_intro">
             <img src="../img/fan.png" class="section_intro_icon" /><span class="section_intro_title">舞蹈</span>
-            <div class="btn exchange-btn">换一换</div>
+            <div class="btn exchange-btn small" id='dance_btn'>换一换</div>
             <div class="btn more-btn"> 更多 ></div>
           </div>
           <ul class="section_list">
@@ -3313,7 +3313,7 @@
         <div class="section_twoline_content">
           <div class="section_intro">
             <img src="../img/game_logo.png" class="section_intro_icon" /><span class="section_intro_title">游戏</span>
-            <div class="btn exchange-btn">换一换</div>
+            <div class="btn exchange-btn small" id='game_btn'>换一换</div>
             <div class="btn more-btn"> 更多 ></div>
           </div>
           <ul class="section_list">
@@ -3553,7 +3553,7 @@
         <div class="section_twoline_content">
           <div class="section_intro">
             <img src="../img/knowledge.png" class="section_intro_icon" /><span class="section_intro_title">知识</span>
-            <div class="btn exchange-btn">换一换</div>
+            <div class="btn exchange-btn  small" id='knowledge_btn'>换一换</div>
             <div class="btn more-btn"> 更多 ></div>
           </div>
           <ul class="section_list">
@@ -3796,7 +3796,7 @@
         <div class="section_intro">
           <img src="../img/classRoom.png" class="section_intro_icon" />
           <span class="section_intro_title">课堂</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="classroom_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path
@@ -3957,7 +3957,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/real_camera.png" class="section_intro_icon" /><span class="section_intro_title">数码</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="digital_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path
@@ -4237,7 +4237,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/yellow_duck.png" class="section_intro_icon" /><span class="section_intro_title">生活</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="life_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path
@@ -4517,7 +4517,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/joker.png" class="section_intro_icon" /><span class="section_intro_title">鬼畜</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="guichu_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path
@@ -4797,7 +4797,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/skirt.png" class="section_intro_icon" /><span class="section_intro_title">时尚</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="fashion_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path
@@ -5077,7 +5077,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/news_logo.png" class="section_intro_icon" /><span class="section_intro_title">资讯</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="news_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path
@@ -5273,7 +5273,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/star.png" class="section_intro_icon" /><span class="section_intro_title">娱乐</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="entertainment_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path
@@ -5553,7 +5553,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/column.png" class="section_intro_icon" /><span class="section_intro_title">专栏</span>
-          <div class="btn exchange-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
+          <div class="btn exchange-btn small"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
             xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
             <path
               d="M29.785374 570.207703c-9.704013 0-19.235087-4.79419-24.833595-13.607926-8.727779-13.693884-4.679579-31.866778 9.014304-40.594557l154.168242-98.156554c13.636578-8.699126 31.866778-4.708232 40.594557 9.014304 8.727779 13.693884 4.679579 31.866778-9.014304 40.594557L45.546336 565.614082C40.666188 568.714699 35.18229 570.207703 29.785374 570.207703z"
@@ -5924,7 +5924,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/watch_movie.png" class="section_intro_icon" /><span class="section_intro_title">电影</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="movie_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path
@@ -6217,7 +6217,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/sofa.png" class="section_intro_icon" /><span class="section_intro_title">电视剧</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="real_drama_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path
@@ -6510,7 +6510,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/photo.png" class="section_intro_icon" /><span class="section_intro_title">影视</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="watch_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path
@@ -6790,7 +6790,7 @@
       <div class="section_twoline_content">
         <div class="section_intro">
           <img src="../img/fish.png" class="section_intro_icon" /><span class="section_intro_title">纪录片</span>
-          <div class="btn exchange-btn">换一换</div>
+          <div class="btn exchange-btn small" id="document_btn">换一换</div>
           <div class="btn more-btn"><svg t="1601736041139" class="icon" viewBox="0 0 1024 1024" version="1.1"
               xmlns="http://www.w3.org/2000/svg" p-id="7767" width="16" height="16">
               <path

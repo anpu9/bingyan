@@ -1,7 +1,132 @@
-#little_tv {
+.section_item,
+.section_host_item {
+  width: 170px;
+  height: 170px;
+}
+.section_item > img,
+.section_video {
+  width: 170px;
+  height: 96.05px;
+  margin-top: 15px;
+}
+.section_content,
+.section_twoline_content,
+.section_intro,
+.ani_box {
+  width: 710px;
 
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.new_drama_iframe {
+  width: 710px;
+  height: 250px;
+}
+new_drama_item{
+  width:178.5px;
+  height: 59.5px;
+  flex: 0 0 33%;
+  position: relative;
+  margin-bottom: 10px;
+}
+.new_drama_item>img{
+  width:59.5px;
+  height: 59.5px;
+}
+.new_drama_item>.drama_txt_box{
+  position: absolute;
+  top:5px;
+  left:70px;
+}
+.drama_txt_box>.drama_title{
+  font-size: 0.9em;
+}
+.drama_txt_box>.drama_process{
+  
+  font-size: 0.4em;
+  margin-top:24px;
+}
+.section_item > .icon {
+  transform: translateY(-23px);
+}
+.section_item > .likes {
+  transform: translate(50px, -23px);
+}
+.section_video_play_sum,
+.section_video_likes,
+.section_video_time {
+  font-size: 0.8em;
+  position: absolute;
+  top: 90px;
+}
+.board_introduction {
+  padding-top: 7px;
+}
+.board_text > .board_channel {
+  font-weight: 1.3em;
+  color: black;
+}
+.board_text > .board_brief {
+  font-size: 0.6em;
+  margin: 7px 0;
+  color: black;
+}
+.board_introduction {
+  padding-top: 7px;
+}
+.board_text > .board_type {
+  font-size: 0.6em;
+  color: grey;
+}
+.ani_item,
+.ani_item > img {
+  width: 130px;
+}
+.real_ranking_ol {
+  height: 50%;
+}
+.tab_bottom_item > li,
+.real_ranking_ol > li,
+.real_ranking_ol > li .for_nowrap {
+  width: 255px;
+}
+
+.real_ranking_ol :nth-child(8),
+.real_ranking_ol :nth-child(9),
+.real_ranking_ol :nth-child(10) {
   display: none;
 }
-body{
-    background-color: red;
+.section_column_item {
+  display: inline-block;
+  height: 90px;
+  width: 340px;
+  margin-bottom: 15px;
 }
+.column_txt {
+  width: 200px;
+  vertical-align: top;
+}
+.column_txt > .column_title,
+.column_txt > .column_up {
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
+.right_ad > .right_ad_pic {
+  width: 255px;
+  height: 266px;
+}
+#little_tv {
+  margin-right: 20px;
+
+  width: 40px;
+  height: auto;
+}
+.little_tv_item{
+  height:24px;
+  width: 40px;
+  line-height: 24px;
+  text-align: center;
+  }
+  .little_tv_item>a{
+    font-size:0.4em;
+    }

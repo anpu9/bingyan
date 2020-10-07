@@ -34,6 +34,9 @@ let index = 1;
 let highLightIndex; //高亮的序号
 let lettleTvA = getTvA(littleTvItems);
 let asider = document.getElementById("little_tv");
+let smallBtn=document.getElementsByClassName('small');
+
+
 function getTvA(list) {
   let newList = [];
   for (let i = 0; i < list.length; i++) {
@@ -94,7 +97,7 @@ function beingVisible(e) {
   e.style.visibility = "visible";
 }
 function beingCovered(e) {
-  e.style.zIndex = -1;
+  e.style.zIndex = 1;
 }
 function cover(e) {
   console.log(e);
@@ -155,9 +158,85 @@ iter(tabTopLive, tabTopLiveItems);
 iter(tabTopAni,tabTopAniItems);
 
 //换一换功能
-function change() {
-  //模拟json,更换元素的innerHTML
+//动漫区大图片
+//其他区域小图片
+
+//得到sum个[0,range]的随机数
+function getNoRepeat(sum,range){
+  let indexList=[];
+  let newList=[];
+  for(let i=0;i<range;i++){
+    newList[i]=0;
+  } 
+  for(let j=0;j<sum;j++){  
+  let num=parseInt(Math.random()*range);
+  while(newList[num]!==0){
+    num=parseInt(Math.random()*range); 
+  }
+  newList[num]=1;
+  indexList.push(num);
+ }
+ return indexList;
 }
+function getImage(parent){
+  parents=document.getElementsByClassName(parent);
+  Images=[]
+  for(let i=0;i<parents.length;i++){
+  let image=parents[i].getElementsByTagName('img')[0];
+  Images.push(image);
+  }
+  return Images;
+}
+function changeLittle(domList){//domlist是img的集合
+  
+  let littleSrc=['../img/change1.webp','../img/change2.webp','../img/change3.webp','../img/change4.webp','../img/change5.webp','../img/change6.webp','../img/change7.webp','../img/change8.webp','../img/change9.webp','../img/change9.webp','../img/change10.webp','../img/change11.webp','../img/change12.webp','../img/change13.webp'];
+  var sum=Math.ceil(((Math.random())*8));
+  
+  var positionList=getNoRepeat(sum,8);
+ 
+  var itemsIndexList=getNoRepeat(sum,12);
+
+  for(let i=0;i<sum;i++){
+    console.log(domList[positionList[i]]);
+   domList[positionList[i]].src=littleSrc[itemsIndexList[i]];
+  }
+}
+function changeLarge(domList) {
+  let largeSrc=['../img/change14.webp','../img/change15.webp','../img/change16.webp','../img/change17.webp','../img/change18.webp','../img/change19.webp','../img/change20.webp']
+  var sum=Math.ceil(((Math.random())*8));
+  let positionList=getNoRepeat(sum,10);
+  let itemsIndexList=getNoRepeat(sum,6);
+  for(let i=0;i<sum;i++){
+   domList[positionList[i]].src=largeSrc[itemsIndexList[i]];
+  }
+}
+//感觉这里可以用正则表达式简便的匹配，但时间不够了我就傻瓜式的调用函数了
+let liveBtn=document.getElementById('live_btn');
+liveBtn.addEventListener('click',()=>{
+  changeLittle(getImage('section_host_item'));
+});
+let cartoonBtn=document.getElementById('cartoon_btn');
+cartoonBtn.addEventListener('click',()=>{
+  changeLittle(getImage('cartoon_item'));
+});
+let dramaChangeBtn=document.getElementById('drama_btn');
+dramaChangeBtn.addEventListener('click',()=>{
+  changeLittle(getImage(' drama_change_item'));
+});
+let nationBtn=document.getElementById('nation_btn');
+nationBtn.addEventListener('click',()=>{
+  changeLittle(getImage('nation_item'));
+});
+let aniBtn=document.getElementById('ani_btn');
+console.log(getImage('ani_item').slice(10))
+aniBtn.addEventListener('click',()=>{
+  let hot_index=document.getElementById('_hot_ani').style.zIndex;
+  if(hot_index==2){
+   changeLarge(getImage('ani_item').slice(0,10));
+  }else{
+   changeLarge(getImage('ani_item').slice(10));
+  }
+});
 
 //文字滚动
 function random() {}

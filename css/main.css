@@ -113,6 +113,7 @@ padding-left: 4px;
 .distrcit_item_name,.fast_pick_item span,.sorts_activity_item span,.section_words,.section_intro_title,.first_rank_cartoon_title,.for_nowrap,.drama_title,.ani_item_title,.board_channel,.section_up,.column_title,.section_ad p{
   transition: color 0.2s;
 }
+
 .selected{
  border-bottom: 1px solid #00a1d6; 
 }
@@ -621,8 +622,8 @@ right: -150px;
   left: 0;
   top:0;
 }
-#hot_ani,#latest,#_latest,#host_ranking,#month{
-  z-index: 1;
+#_hot_ani,#latest,#_latest,#host_ranking,#month{
+  z-index: 2;
   background: snow;
 
 }
@@ -747,6 +748,7 @@ right: -150px;
 .board_text > .board_type {
   font-size: 0.8em;
   color: grey;
+  
 }
 
 .tab_top{
@@ -1030,10 +1032,10 @@ transform: translateY(5px);
   transform: translate(65px,-23px);
 }
 .ani_item{
-  float: left;
+  display: inline-block;
   margin-left: 7px;
   margin-bottom: 20px;
-  width: 158.6px;
+  width: 153px;
   height: auto;
 }
 .ani_item>img{
@@ -1047,7 +1049,7 @@ transform: translateY(5px);
   top:80px;
 }
 .section_column_item{
-  float: left;
+  display: inline-block;
   height: 90px;
   width:400px;
   margin-bottom: 15px;
@@ -1072,4 +1074,3 @@ margin-bottom: 17px;
 .ad_no_table{
   margin-top:61px;
 }
-@media and screen ()
