@@ -28,7 +28,7 @@ footer {
  background: #f6f9fa;
  display: flex;
 }
-aside{
+#connect{
   width:25px;
   height:72px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -39,7 +39,42 @@ aside{
   transition: background 0.5s;
   z-index: 3;
 }
-aside>a{
+#little_tv{
+  margin-right:25px;
+  position: -webkit-sticky;
+  position:sticky;
+  top:0px;
+ float: right;
+  width:50px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: snow;
+  z-index: 3;
+}
+.little_tv_item{
+height:30px;
+width: 50px;
+line-height: 30px;
+text-align: center;
+}
+
+.little_tv_item>a{
+  display: block;
+  width:100%;
+  height: 100%;
+  color: grey;
+  font-size:0.5em;
+  }
+.little_tv_item>a:hover{
+  color: snow;
+  background-color: #00a1d6;
+}
+.switch_on{
+  color: snow!important;
+  background-color: #00a1d6;
+}
+#connect>a{
   display: block;
   width: 25px;
   height: 72px;
@@ -49,7 +84,7 @@ padding-left: 4px;
   color:rgba(0, 0, 0, 0.5);
   font-size: 0.8em;
 }
-aside:hover,.btn:hover{
+#connect:hover,.btn:hover{
   background: rgba(0, 0, 0, 0.05); 
 }
 .link_box {
@@ -58,7 +93,7 @@ aside:hover,.btn:hover{
   padding-top: 30px;
   flex-shrink: 0;
 }
-.mini_header,
+#mini_header,
 .mini_header_content,
 .nav_user_center,
 .center_wrap > .beginner,
@@ -84,7 +119,7 @@ aside:hover,.btn:hover{
 .section_column_item:hover,.section_item:hover,.new_drama_item:hover,.signin_item:hover,.contribute_btn:hover,.play_broad_container:hover,.suggest_video_item:hover{
   cursor: pointer;
 }
-.mini_header {
+#mini_header {
   height: 150px;
  background-image:url(../img/background.png);
 }
