@@ -12,10 +12,11 @@
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" media="screen and (max-width:1000px)" href="../css/response.css"/>
 </head>
 
 <body>
- 
+  <aside id="connect"><a href="#">联系客服</a></aside>
     <header id="mini_header" data-switch="21" >
       <div class="mini_header_content">
         <ul class="nav_link_ul"><!--浮动-->
@@ -2550,7 +2551,7 @@
       </section>
     </div>
     <div class="center_wrap right_switch"  data-switch="4"  id="ani">
-      <section class="center ani" >
+      <section class="center" >
         <div class="ani_box">
           <div class="section_intro">
             <img src="../img/ani_logo.png" class="section_intro_icon" /><span class="section_intro_title">漫画</span>
@@ -2670,20 +2671,20 @@
             
           </div>
         </div>
-        <div class="real_ranking">
+        <div class="real_ranking" id="tab_ani_box">
           <h1>排行榜</h1>
           <ul class="tab_top" id="tab_ani">
-            <li>月票</li>
-            <li>应援</li>
-            <li>应援</li>
+            <li data-tab="0"  class="selected">月票</li>
+            <li data-tab="1">应援</li>
+            <li data-tab="2">飙升</li>
           </ul>
           <div class="btn more-btn btn_for_ranking">更多 ></div>
-          <ol class="real_ranking_ol">
+          <ul class="real_ranking_ol ani_ranking_list" id="month">
             <li>
               <span class="ranking_number">1</span><img class="ani_first_rank" src="../img/first_rank_ani.webp"
                 alt="first_rank" />
               <h2 class="first_rank_cartoon_title">
-                如何和老板打成一片！！！
+                我是月票
               </h2>
               <p class="ani_item_type first_rank_ani_type">日常 搞笑</p>
               <p class="ani_item_type first_rank_ani_process">更新至22话</p>
@@ -2777,7 +2778,95 @@
                 全13话
               </span>
             </li>
-          </ol>
+          </ul>
+          <ul class="real_ranking_ol ani_ranking_list" id="support">
+            <li>
+              <span class="ranking_number">1</span><img class="ani_first_rank" src="../img/support.webp"
+                alt="first_rank" />
+              <h2 class="first_rank_cartoon_title">
+                我是应援
+              </h2>
+              <p class="ani_item_type first_rank_ani_type">日常 搞笑</p>
+              <p class="ani_item_type first_rank_ani_process">更新至22话</p>
+            </li>
+            <li>
+              <span class="ranking_number">2</span>
+              <h2 class="for_nowrap drama_ranking_title">
+                我是应援</h2>
+              <span class="drama_ranking_process">
+                全13话
+              </span>
+            </li>
+        
+          </ul>
+          <ul class="real_ranking_ol ani_ranking_list" id="surge">
+            <li>
+              <span class="ranking_number">1</span><img class="ani_first_rank" src="../img/surge.webp"
+                alt="first_rank" />
+              <h2 class="first_rank_cartoon_title">
+                我是飙升
+              </h2>
+              <p class="ani_item_type first_rank_ani_type">日常 搞笑</p>
+              <p class="ani_item_type first_rank_ani_process">更新至22话</p>
+            </li>
+            <li>
+              <span class="ranking_number">2</span>
+              <h2 class="for_nowrap drama_ranking_title">
+                刀剑神域 爱丽丝篇 异界战争 -终章</h2>
+              <span class="drama_ranking_process">
+                全13话
+              </span>
+            </li>
+
+            <li>
+              <span class="ranking_number">3</span>
+              <h2 class="for_nowrap drama_ranking_title">
+                刀剑神域 爱丽丝篇 异界战争 -终章</h2>
+              <span class="drama_ranking_process">
+                全13话
+              </span>
+            </li>
+            <li>
+              <span class="ranking_number">4</span>
+              <h2 class="for_nowrap drama_ranking_title">
+                刀剑神域 爱丽丝篇 异界战争 -终章</h2>
+              <span class="drama_ranking_process">
+                全13话
+              </span>
+            </li>
+            <li>
+              <span class="ranking_number">5</span>
+              <h2 class="for_nowrap drama_ranking_title">
+                刀剑神域 爱丽丝篇 异界战争 -终章</h2>
+              <span class="drama_ranking_process">
+                全13话
+              </span>
+            </li>
+            <li>
+              <span class="ranking_number">6</span>
+              <h2 class="for_nowrap drama_ranking_title">
+                刀剑神域 爱丽丝篇 异界战争 -终章</h2>
+              <span class="drama_ranking_process">
+                全13话
+              </span>
+            </li>
+            <li>
+              <span class="ranking_number">7</span>
+              <h2 class="for_nowrap drama_ranking_title">
+                刀剑神域 爱丽丝篇 异界战争 -终章</h2>
+              <span class="drama_ranking_process">
+                全13话
+              </span>
+            </li>
+            <li>
+              <span class="ranking_number">8</span>
+              <h2 class="for_nowrap drama_ranking_title">
+                刀剑神域 爱丽丝篇 异界战争 -终章</h2>
+              <span class="drama_ranking_process">
+                全13话
+              </span>
+            </li>  
+          </ul>
         </div>
       </section>
     </div>
@@ -3700,8 +3789,7 @@
       </section>
 
 
-    </div>
-   
+    </div>   
     <div class="center_wrap right_switch"  data-switch="9"  id="classroom">
     <section class="center" >
       <div class="section_twoline_content">
@@ -7156,7 +7244,7 @@
       </div>
     </section>
   </footer>
-    <aside id="connect"><a href="#">联系客服</a></aside>
+    
     
   <script src="../JS/main.js" async defer></script>
 </body>

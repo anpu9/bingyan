@@ -21,16 +21,19 @@ let nationIframeTab = document
   .getElementById("nation_switch")
   .getElementsByTagName("li");
 let nationIframeTabItems = document.getElementsByClassName("new_nation_iframe"); //ul数组
-let tabTop = document.getElementById("live_tab_top").getElementsByTagName("li");
-let tabTopItems = document.getElementsByClassName("tab_bottom_item"); //ul数组
+let tabTopLive = document.getElementById("live_tab_top").getElementsByTagName("li");
+let tabTopLiveItems = document.getElementsByClassName("tab_bottom_item"); //ul数组
+let tabTopAni = document.getElementById("tab_ani").getElementsByTagName("li");
+let tabTopAniItems = document.getElementsByClassName("ani_ranking_list"); //ul数组
+
 const LINE_HEIGHT = 30;
 let rightSwicthItems = document.getElementsByClassName("right_switch");
 let littleTvItems = document.getElementsByClassName("little_tv_item");
+
 let index = 1;
 let highLightIndex; //高亮的序号
 let lettleTvA = getTvA(littleTvItems);
-let asider = document
-  .getElementById("little_tv");
+let asider = document.getElementById("little_tv");
 function getTvA(list) {
   let newList = [];
   for (let i = 0; i < list.length; i++) {
@@ -94,9 +97,11 @@ function beingCovered(e) {
   e.style.zIndex = -1;
 }
 function cover(e) {
+  console.log(e);
   e.style.zIndex = 2;
 }
 function switch_tab(e, target_ele) {
+  console.log(e);
   let _this = e.target;
   _this.parentNode.childNodes.forEach((node) => {
     node.className = "unselected";
@@ -146,7 +151,8 @@ function iter(list, target_item) {
 iter(aniSwicthTab, aniSwicthTabItem);
 iter(dramaIframeTab, dramaIframeTabItems);
 iter(nationIframeTab, nationIframeTabItems);
-iter(tabTop, tabTopItems);
+iter(tabTopLive, tabTopLiveItems);
+iter(tabTopAni,tabTopAniItems);
 
 //换一换功能
 function change() {
@@ -180,12 +186,12 @@ function highLight(e) {
 function pale(e) {
   e.className = "none";
 }
-function allPale(){
-  lettleTvA.forEach((tvA)=>{
-   if(tvA.dataset.switch!==highLightIndex){
-    pale(tvA);
-  }  
-});
+function allPale() {
+  lettleTvA.forEach((tvA) => {
+    if (tvA.dataset.switch !== highLightIndex) {
+      pale(tvA);
+    }
+  });
 }
 function getItems(list, targetIndex) {
   for (let i = 0; i < list.length; i++) {
@@ -195,33 +201,30 @@ function getItems(list, targetIndex) {
 }
 function littleTv(e) {
   //e是RIGHT_SWITCH_ITEMS,改变样式的是LITTLE_TV_ITEMS，用dataset连接
-  
+
   let switch_index = e.dataset.switch;
-  if(!switch_index) return;
+  if (!switch_index) return;
   let rectObject = e.getBoundingClientRect();
   let clientHeight = getClientHeight();
-  
 
   let swicth_distance = rectObject.top;
-  
+
   if (swicth_distance > clientHeight) return;
 
   let item = getItems(lettleTvA, switch_index); //找到对应的小电视
- 
-  if (item && swicth_distance <0.6*clientHeight) {
-    
+
+  if (item && swicth_distance < 0.6 * clientHeight) {
     highLight(item);
   }
-} 
-window.addEventListener('scroll',()=>{
-
-  Array.from(rightSwicthItems).forEach((item)=>littleTv(item));
+}
+window.addEventListener("scroll", () => {
+  Array.from(rightSwicthItems).forEach((item) => littleTv(item));
   allPale();
-  if(asider.getBoundingClientRect().top>0){
-    highLightIndex=28;
+  if (asider.getBoundingClientRect().top > 0) {
+    highLightIndex = 28;
     allPale();
   }
-})
+});
 
 lettleTvA.forEach((tvA) => {
   tvA.addEventListener("click", () => {

@@ -37,14 +37,15 @@ footer {
   left: 0;
   top:40vh;
   transition: background 0.5s;
-  z-index: 3;
+  z-index:10;
+  background-color: snow;
 }
 #little_tv{
   margin-right:25px;
   position: -webkit-sticky;
   position:sticky;
   top:0px;
- float: right;
+  float: right;
   width:50px;
   height: auto;
   border-radius: 5px;
@@ -84,7 +85,10 @@ padding-left: 4px;
   color:rgba(0, 0, 0, 0.5);
   font-size: 0.8em;
 }
-#connect:hover,.btn:hover{
+#connect:hover{
+  background:#f2f2f5;
+}
+.btn:hover{
   background: rgba(0, 0, 0, 0.05); 
 }
 .link_box {
@@ -101,6 +105,10 @@ padding-left: 4px;
 .center,.center_wrap {
   display: flex;
   flex-shrink: 0;
+
+}
+#ani{
+  height: 100%;
 }
 .distrcit_item_name,.fast_pick_item span,.sorts_activity_item span,.section_words,.section_intro_title,.first_rank_cartoon_title,.for_nowrap,.drama_title,.ani_item_title,.board_channel,.section_up,.column_title,.section_ad p{
   transition: color 0.2s;
@@ -521,7 +529,7 @@ board_host_img {
 #suggest_video_list {
   position: relative;
   width: 540px;
-  margin-left: 30px;
+  margin:0 auto;
 }
 .suggest_video_item {
   float: left;
@@ -593,19 +601,27 @@ box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.4);
   height: 36px;
   display: inline-block;
 }
-#ani_content,#iframe_list,#tab_bottom_list{
-  position: relative;
+#tab_ani_box>h1,#tab_ani{
+  display: inline-block;
 }
-.ani_list,.new_drama_iframe,.new_nation_iframe,.tab_bottom_item,#pick_for{
+#tab_ani_box>.more-btn{
+right: -150px;
+}
+#ani_content,#iframe_list,#tab_bottom_list,#tab_ani{
+  position: relative;
+  
+}
+.ani_list,.new_drama_iframe,.new_nation_iframe,.tab_bottom_item,#pick_for,.ani_ranking_list{
   background: snow;
   position: absolute;
   z-index:-1;
+
 }
 #pick_for{
   left: 0;
   top:0;
 }
-#hot_ani,#latest,#_latest,#host_ranking{
+#hot_ani,#latest,#_latest,#host_ranking,#month{
   z-index: 1;
   background: snow;
 
@@ -738,7 +754,7 @@ box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.4);
 }
 .tab_top > li {
   display: inline-block;
-  padding-right: 10px;
+  margin-right: 10px;
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.8em;
 }
@@ -769,7 +785,9 @@ box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.4);
   margin-top: 20px;
   position: relative;
 }
-
+.real_ranking_ol{
+  height:90%;
+}
 .tab_bottom_item > li,
 .real_ranking_ol > li {
   margin-bottom: 17px;
@@ -853,11 +871,8 @@ right:0;
 .real_ranking {
   position: relative;
 }
-.tab_ani{
-  position: absolute;
-  top:5px;
-  left:70px;
-}
+
+
 .btn_for_ranking {
   top: 15px;
   right: -15px;
@@ -1057,3 +1072,4 @@ margin-bottom: 17px;
 .ad_no_table{
   margin-top:61px;
 }
+@media and screen ()
