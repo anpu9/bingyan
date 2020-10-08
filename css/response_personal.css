@@ -1,0 +1,31 @@
+body{
+    overflow: hidden;
+}
+#information_background,.my_relative_box{
+    width:100%   
+}
+.my_relative_box{
+    width:auto;   
+}
+
+.me_box{
+    background: transparent;
+    position: absolute;
+    left:10px;
+    top:30%;
+    height: 47.6px;
+    line-height: 47.6px;
+}
+#my_name{
+    font-size: 0.9em;
+    vertical-align: top;
+    padding-left: 5px;
+}
+#me_pic{
+
+    width: 47.6px;
+    height: 47.6px;
+}
+.relative_item{
+    margin-left: 3px;
+}

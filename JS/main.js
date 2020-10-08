@@ -1,10 +1,11 @@
 let scrollItems = document.querySelector("#broad_list");
-let showWindow = document.querySelector(".play_broad_container");
+let showWindow = document.querySelector("#play_broad_container");
 let buttons = document
   .getElementById("eats_buttons")
   .getElementsByTagName("span");
-const WIDTH = 459;
+
 let inputBox = document.getElementById("nav_search_keyword");
+let inputScroll = document.getElementById("scroll_list");
 let historyList = document.getElementById("input_history_list");
 let historyItems = document.getElementsByClassName("input_histoy_item");
 let historyItemsDelBtn = document.getElementsByClassName("delete_btn");
@@ -21,7 +22,9 @@ let nationIframeTab = document
   .getElementById("nation_switch")
   .getElementsByTagName("li");
 let nationIframeTabItems = document.getElementsByClassName("new_nation_iframe"); //ul数组
-let tabTopLive = document.getElementById("live_tab_top").getElementsByTagName("li");
+let tabTopLive = document
+  .getElementById("live_tab_top")
+  .getElementsByTagName("li");
 let tabTopLiveItems = document.getElementsByClassName("tab_bottom_item"); //ul数组
 let tabTopAni = document.getElementById("tab_ani").getElementsByTagName("li");
 let tabTopAniItems = document.getElementsByClassName("ani_ranking_list"); //ul数组
@@ -34,8 +37,17 @@ let index = 1;
 let highLightIndex; //高亮的序号
 let lettleTvA = getTvA(littleTvItems);
 let asider = document.getElementById("little_tv");
-let smallBtn=document.getElementsByClassName('small');
-
+let smallBtn = document.getElementsByClassName("small");
+let width = 540;
+let mediaChange = window.matchMedia("(max-width:1170px)");
+function reWidth(obj) {
+  if (obj.matches) {
+    width = 459;
+  } else {
+    width = 540;
+  }
+}
+mediaChange.addEventListener("change", reWidth);
 
 function getTvA(list) {
   let newList = [];
@@ -55,7 +67,7 @@ function skip() {
   index = nowIndex;
 
   scrollItems.style.top = 0;
-  scrollItems.style.left = -parseInt(nowIndex - 1) * WIDTH + "px";
+  scrollItems.style.left = -parseInt(nowIndex - 1) * width + "px";
 }
 function scroll() {
   index++;
@@ -69,7 +81,7 @@ function scroll() {
     scrollItems.style.transition = "none";
   }
   scrollItems.style.top = 0;
-  scrollItems.style.left = -parseInt(index - 1) * WIDTH + "px";
+  scrollItems.style.left = -parseInt(index - 1) * width + "px";
 }
 function stop() {
   clearInterval(timer);
@@ -88,6 +100,7 @@ function unfocus(e) {
     return;
   } else {
     beingHideen(historyList);
+    start(inputScroll);
   }
 }
 function beingHideen(e) {
@@ -103,7 +116,7 @@ function cover(e) {
   console.log(e);
   e.style.zIndex = 2;
 }
-function switch_tab(e, target_ele) {
+function switchTab(e, target_ele) {
   console.log(e);
   let _this = e.target;
   _this.parentNode.childNodes.forEach((node) => {
@@ -141,13 +154,14 @@ Array.from(historyItemsDelBtn).forEach((btn) => {
 });
 inputBox.addEventListener("focus", () => {
   beingVisible(historyList);
+  pause(inputScroll);
 });
 
 //tab选项卡
 function iter(list, target_item) {
   for (let i = 0; i < list.length; i++) {
     list[i].addEventListener("click", (e) => {
-      switch_tab(e, target_item);
+      switchTab(e, target_item);
     });
   }
 }
@@ -155,92 +169,120 @@ iter(aniSwicthTab, aniSwicthTabItem);
 iter(dramaIframeTab, dramaIframeTabItems);
 iter(nationIframeTab, nationIframeTabItems);
 iter(tabTopLive, tabTopLiveItems);
-iter(tabTopAni,tabTopAniItems);
+iter(tabTopAni, tabTopAniItems);
 
 //换一换功能
 //动漫区大图片
 //其他区域小图片
 
 //得到sum个[0,range]的随机数
-function getNoRepeat(sum,range){
-  let indexList=[];
-  let newList=[];
-  for(let i=0;i<range;i++){
-    newList[i]=0;
-  } 
-  for(let j=0;j<sum;j++){  
-  let num=parseInt(Math.random()*range);
-  while(newList[num]!==0){
-    num=parseInt(Math.random()*range); 
+function getNoRepeat(sum, range) {
+  let indexList = [];
+  let newList = [];
+  for (let i = 0; i < range; i++) {
+    newList[i] = 0;
   }
-  newList[num]=1;
-  indexList.push(num);
- }
- return indexList;
+  for (let j = 0; j < sum; j++) {
+    let num = parseInt(Math.random() * range);
+    while (newList[num] !== 0) {
+      num = parseInt(Math.random() * range);
+    }
+    newList[num] = 1;
+    indexList.push(num);
+  }
+  return indexList;
 }
-function getImage(parent){
-  parents=document.getElementsByClassName(parent);
-  Images=[]
-  for(let i=0;i<parents.length;i++){
-  let image=parents[i].getElementsByTagName('img')[0];
-  Images.push(image);
+function getImage(parent) {
+  parents = document.getElementsByClassName(parent);
+  Images = [];
+  for (let i = 0; i < parents.length; i++) {
+    let image = parents[i].getElementsByTagName("img")[0];
+    Images.push(image);
   }
   return Images;
 }
-function changeLittle(domList){//domlist是img的集合
-  
-  let littleSrc=['../img/change1.webp','../img/change2.webp','../img/change3.webp','../img/change4.webp','../img/change5.webp','../img/change6.webp','../img/change7.webp','../img/change8.webp','../img/change9.webp','../img/change9.webp','../img/change10.webp','../img/change11.webp','../img/change12.webp','../img/change13.webp'];
-  var sum=Math.ceil(((Math.random())*8));
-  
-  var positionList=getNoRepeat(sum,8);
- 
-  var itemsIndexList=getNoRepeat(sum,12);
+function changeLittle(domList) {
+  //domlist是img的集合
 
-  for(let i=0;i<sum;i++){
+  let littleSrc = [
+    "../img/change1.webp",
+    "../img/change2.webp",
+    "../img/change3.webp",
+    "../img/change4.webp",
+    "../img/change5.webp",
+    "../img/change6.webp",
+    "../img/change7.webp",
+    "../img/change8.webp",
+    "../img/change9.webp",
+    "../img/change9.webp",
+    "../img/change10.webp",
+    "../img/change11.webp",
+    "../img/change12.webp",
+    "../img/change13.webp",
+  ];
+  var sum = Math.ceil(Math.random() * 8);
+
+  var positionList = getNoRepeat(sum, 8);
+
+  var itemsIndexList = getNoRepeat(sum, 12);
+
+  for (let i = 0; i < sum; i++) {
     console.log(domList[positionList[i]]);
-   domList[positionList[i]].src=littleSrc[itemsIndexList[i]];
+    domList[positionList[i]].src = littleSrc[itemsIndexList[i]];
   }
 }
 function changeLarge(domList) {
-  let largeSrc=['../img/change14.webp','../img/change15.webp','../img/change16.webp','../img/change17.webp','../img/change18.webp','../img/change19.webp','../img/change20.webp']
-  var sum=Math.ceil(((Math.random())*8));
-  let positionList=getNoRepeat(sum,10);
-  let itemsIndexList=getNoRepeat(sum,6);
-  for(let i=0;i<sum;i++){
-   domList[positionList[i]].src=largeSrc[itemsIndexList[i]];
+  let largeSrc = [
+    "../img/change14.webp",
+    "../img/change15.webp",
+    "../img/change16.webp",
+    "../img/change17.webp",
+    "../img/change18.webp",
+    "../img/change19.webp",
+    "../img/change20.webp",
+  ];
+  var sum = Math.ceil(Math.random() * 8);
+  let positionList = getNoRepeat(sum, 10);
+  let itemsIndexList = getNoRepeat(sum, 6);
+  for (let i = 0; i < sum; i++) {
+    domList[positionList[i]].src = largeSrc[itemsIndexList[i]];
   }
 }
 //感觉这里可以用正则表达式简便的匹配，但时间不够了我就傻瓜式的调用函数了
-let liveBtn=document.getElementById('live_btn');
-liveBtn.addEventListener('click',()=>{
-  changeLittle(getImage('section_host_item'));
+let liveBtn = document.getElementById("live_btn");
+liveBtn.addEventListener("click", () => {
+  changeLittle(getImage("section_host_item"));
 });
-let cartoonBtn=document.getElementById('cartoon_btn');
-cartoonBtn.addEventListener('click',()=>{
-  changeLittle(getImage('cartoon_item'));
+let cartoonBtn = document.getElementById("cartoon_btn");
+cartoonBtn.addEventListener("click", () => {
+  changeLittle(getImage("cartoon_item"));
 });
-let dramaChangeBtn=document.getElementById('drama_btn');
-dramaChangeBtn.addEventListener('click',()=>{
-  changeLittle(getImage(' drama_change_item'));
+let dramaChangeBtn = document.getElementById("drama_btn");
+dramaChangeBtn.addEventListener("click", () => {
+  changeLittle(getImage(" drama_change_item"));
 });
-let nationBtn=document.getElementById('nation_btn');
-nationBtn.addEventListener('click',()=>{
-  changeLittle(getImage('nation_item'));
+let nationBtn = document.getElementById("nation_btn");
+nationBtn.addEventListener("click", () => {
+  changeLittle(getImage("nation_item"));
 });
-let aniBtn=document.getElementById('ani_btn');
-console.log(getImage('ani_item').slice(10))
-aniBtn.addEventListener('click',()=>{
-  let hot_index=document.getElementById('_hot_ani').style.zIndex;
-  if(hot_index==2){
-   changeLarge(getImage('ani_item').slice(0,10));
-  }else{
-   changeLarge(getImage('ani_item').slice(10));
+let aniBtn = document.getElementById("ani_btn");
+
+aniBtn.addEventListener("click", () => {
+  let hot_index = document.getElementById("_hot_ani").style.zIndex;
+  if (hot_index == 2) {
+    changeLarge(getImage("ani_item").slice(0, 10));
+  } else {
+    changeLarge(getImage("ani_item").slice(10));
   }
 });
 
 //文字滚动
-function random() {}
-
+function pause(ele) {
+  ele.style["animationPlayState"] = "paused";
+}
+function start(ele) {
+  ele.style["animationPlayState"] = "running";
+}
 //小电视高亮
 function getClientHeight() {
   let clientHeight = 0;
