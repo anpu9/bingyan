@@ -113,11 +113,9 @@ function beingCovered(e) {
   e.style.zIndex = 1;
 }
 function cover(e) {
-  console.log(e);
   e.style.zIndex = 2;
 }
 function switchTab(e, target_ele) {
-  console.log(e);
   let _this = e.target;
   _this.parentNode.childNodes.forEach((node) => {
     node.className = "unselected";
@@ -227,7 +225,6 @@ function changeLittle(domList) {
   var itemsIndexList = getNoRepeat(sum, 12);
 
   for (let i = 0; i < sum; i++) {
-    console.log(domList[positionList[i]]);
     domList[positionList[i]].src = littleSrc[itemsIndexList[i]];
   }
 }
